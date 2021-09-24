@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 8px;
+}
+body{
+    background-color: lightgray;
+}
+$fastMotion : 0.2s all ease;
+$mediumMotion : 0.5s all ease;
+$slowMotion : 0.8s all ease;

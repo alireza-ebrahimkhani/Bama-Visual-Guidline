@@ -1,0 +1,31 @@
+$xsScreen:320px;
+$sScreen:375px;
+$mScreen:768px;
+$lScreen:1024px;
+$xlScreen:1440px;
+
+@mixin xsScreen() {
+    @media only screen and (max-width:$xsScreen){
+        @content;
+    }
+}
+@mixin sScreen() {
+    @media only screen and (max-width:$sScreen){
+        @content;
+    }
+}
+@mixin mScreen() {
+    @media only screen and (max-width:$mScreen){
+        @content;
+    }
+}
+@mixin lScreen() {
+    @media only screen and (max-width:$lScreen){
+        @content;
+    }
+}
+@mixin xlScreen() {
+    @media only screen and (max-width:$xlScreen){
+        @content;
+    }
+}
