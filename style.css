@@ -13,10 +13,10 @@ body {
 }
 
 .header_logo {
-  position: absolute;
-  top: 0rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 4rem;
+  left: 4rem;
+  display: inline-block;
   transition: 0.5s all ease;
 }
 
@@ -29,9 +29,8 @@ body {
   width: 60rem;
   height: calc(100vh - 8rem);
   position: fixed;
-  left: 50%;
+  left: 4rem;
   top: 4rem;
-  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -49,8 +48,7 @@ body {
   height: 8rem;
   position: absolute;
   bottom: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 4rem;
   border-radius: 4rem;
   transition: 0.5s all ease;
 }
@@ -68,10 +66,19 @@ body {
   transition: 0.5s all ease;
 }
 
+.header_hamIco:hover::after {
+  content: '';
+  width: 8rem;
+  height: 8rem;
+  background: white;
+  transition: 0.2s all ease;
+}
+
 .header_hamIco--open::after {
   content: '';
   width: 8rem;
   height: 8rem;
+  transition: 0.5s all ease;
 }
 
 .header_line {
@@ -118,10 +125,17 @@ body {
 .header_copyRight {
   position: absolute;
   width: 100%;
-  text-align: center;
-  bottom: 16rem;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: right;
+  bottom: 7.5rem;
+  padding-right: 4rem;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+
+.header_accordion {
+  width: 100%;
+  opacity: 0;
+  transition: 0.2s all ease;
 }
 
 .header_popup {
@@ -130,8 +144,8 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   bottom: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 4rem;
+  transform-origin: bottom center;
   border-radius: 4rem;
   transition: 0.5s all ease;
   overflow: hidden;
@@ -142,5 +156,76 @@ body {
   width: 100%;
   height: 100%;
   bottom: 0rem;
+  left: 0rem;
   transition: 0.5s all ease;
+}
+
+.header_popup--open .header_accordion, .header_popup--open .header_copyRight {
+  opacity: 1;
+  transition: 0.8s all ease;
+  transition-delay: .4s;
+}
+
+.header_menu {
+  padding: 15rem 4rem 0 4rem;
+}
+
+.accordion_list {
+  list-style: none;
+  width: 100%;
+}
+
+.accordion_header {
+  cursor: pointer;
+  padding: 2rem 0;
+}
+
+.accordion_header h3 {
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+.accordion_body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+
+.accordion_item--active {
+  max-height: unset;
+  opacity: 1;
+  padding: 2rem 0rem;
+  transition: 0.2s all ease;
+}
+
+.accordion_icon {
+  width: 3rem;
+  height: 3rem;
+  float: right;
+  position: relative;
+}
+
+.accordion_lineI {
+  height: 0.125rem;
+  width: 2.125rem;
+  background-color: black;
+  position: absolute;
+  top: 1.5rem;
+  left: 0.5rem;
+}
+
+.accordion_lineII {
+  height: 2.125rem;
+  width: 0.125rem;
+  background-color: black;
+  position: absolute;
+  left: 1.5rem;
+  top: 0.5rem;
+  transition: .3s all ease;
+}
+
+.accordion_lineII--open {
+  height: 0px !important;
+  transition: .3s all ease;
 }

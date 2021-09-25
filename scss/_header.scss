@@ -1,9 +1,9 @@
 .header{
     &_logo{
-        position: absolute;
-        top: 0rem;
-        left: 50%; 
-        transform: translateX(-50%);
+        position: relative;
+        top: 4rem;
+        left: 4rem; 
+        display: inline-block;
         transition: $mediumMotion;
     }
     &_logo--down{
@@ -14,9 +14,8 @@
         width: 60rem;
         height: calc(100vh - 8rem);
         position: fixed;
-        left: 50%;
+        left: 4rem;
         top: 4rem;
-        transform: translateX(-50%);
         @include mScreen(){
             width: 100%;
         }
@@ -29,8 +28,7 @@
         height: 8rem;
         position: absolute;
         bottom: 4rem;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 4rem;
         border-radius: 4rem;
         transition: $mediumMotion;
         &::after{
@@ -46,11 +44,21 @@
             transition: $mediumMotion;
         }
     }
+    &_hamIco:hover{
+        &::after{
+            content: '';
+            width: 8rem;
+            height: 8rem;
+            background: white;
+            transition: $fastMotion;
+        }
+    }
     &_hamIco--open{
         &::after{
             content: '';
             width: 8rem;
             height: 8rem;
+            transition: $mediumMotion;
         }
     }
     &_line{
@@ -94,10 +102,16 @@
     &_copyRight{
         position: absolute;
         width: 100%;
-        text-align: center;
-        bottom: 16rem;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: right;
+        bottom: 7.5rem;
+        padding-right: 4rem;
+        opacity: 0;
+        transition: $fastMotion;
+    }
+    &_accordion{
+        width: 100%;
+        opacity: 0;
+        transition: $fastMotion;
     }
     &_popup{
         width: 8rem;
@@ -105,8 +119,8 @@
         background-color: rgba(255, 255, 255, 0.4);
         position: absolute;
         bottom: 4rem;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 4rem;
+        transform-origin: bottom center;
         border-radius: 4rem;
         transition: $mediumMotion;
         overflow: hidden;
@@ -116,6 +130,17 @@
         width: 100%;
         height: 100%;
         bottom: 0rem;
+        left: 0rem;
         transition: $mediumMotion;
+        & .header_accordion , & .header_copyRight{
+            opacity: 1;
+            transition: $slowMotion;
+            transition-delay: .4s;
+        }
+
     }
+    &_menu{
+        padding: 15rem 4rem 0 4rem;
+    }
+    
 }

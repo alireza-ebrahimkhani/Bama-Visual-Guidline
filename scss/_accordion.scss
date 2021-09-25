@@ -1,57 +1,53 @@
 .accordion{
-    position: relative;
-    width: 100%;
-    &__list{
+    &_list{
         list-style: none;
-        margin: 50px auto;
+        width: 100%;
     }
-    & .h1 , & .h2 , & .h3 , & .h4 , & .h5 , & .h6 , & .subtitlei , & .subtitleii , & .bodyi , & .bodyii , & .button , & .caption , & .overline{
-        margin: 0;
-        padding-bottom: 0;
-    }
-    & .h1--fa , & .h2--fa , & .h3--fa , & .h4--fa , & .h5--fa , & .h6--fa , & .subtitlei--fa , & .subtitleii--fa , & .bodyi--fa , & .bodyii--fa , & .button--fa , & .caption--fa , & .overline--fa{
-        text-align: left;
-    }
-    & .h1:before , & .h2:before , & .h3:before , & .h4:before , & .h5:before , & .h6:before {
-        margin-top: 0 !important;
-        padding-bottom: 0;
-        height: unset !important;
-    }
-    &__header{
+    &_header{
         cursor: pointer;
-        padding: 16px;
-        border-top: 1px solid $blue8;
-        transition: $motion;
-        &:hover{
-            background-color: $blue8;
-            transition: $motion;
-        }
+        padding: 2rem 0;
     }
-    &__item:first-child > &__header {
-        border-top: 0px solid  $blue8;
+    &_header h3 {
+        display: inline-block;
+        padding: 1rem 0;
     }
-    &__body{
+    &_body{
         max-height: 0;
-        padding: 0 16px;
         overflow: hidden;
         opacity: 0;
-        transition: $motion;
+        transition: $fastMotion;
     }
-    &__body--active{
+    &_item--active{
         max-height: unset;
         opacity: 1;
-        padding: 16px 16px;
-        transition: $motion;
+        padding: 2rem 0rem;
+        transition: $fastMotion;
     }
-    &__body--deactive{
-        max-height: 0;
-        padding: 0 16px;
-        overflow: hidden;
-        opacity: 0;
-        transition: $motion;
+    &_icon{
+        width: 3rem;
+        height: 3rem;
+        float: right;
+        position: relative;
     }
-    &__info{
-        float: left;
-        margin-right: 2rem;
+    &_lineI{
+        height: 0.125rem;
+        width: 2.125rem;
+        background-color: black;
+        position: absolute;
+        top: 1.5rem;
+        left:0.5rem
+    }
+    &_lineII{
+        height: 2.125rem;
+        width: 0.125rem;
+        background-color: black;
+        position: absolute;
+        left: 1.5rem;
+        top:0.5rem;
+        transition: .3s all ease;
+    }
+    &_lineII--open{
+        height: 0px !important;
+        transition: .3s all ease;
     }
 }
