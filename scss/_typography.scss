@@ -148,7 +148,6 @@ a{
     @extend %faType;
     display: none;
     &--show{
-        font-family: $fafont;
         display: block;
     }
 }

@@ -330,7 +330,6 @@ a {
 }
 
 .fa--show {
-  font-family: "Peyda";
   display: block;
 }
 
@@ -583,43 +582,8 @@ a {
   height: 30rem;
 }
 
-.sideBar {
-  padding: 6rem;
-}
-
-.sideBar_translate {
-  float: none;
-  display: block;
-}
-
-.sideBar_transSwitch {
-  background-color: white;
-  width: 3.5rem;
-  height: 2rem;
-  display: inline-block;
-  margin-right: 1rem;
-  cursor: pointer;
-  transition: 0.2s all ease;
-}
-
-.sideBar_transSwitch--active {
-  transition: 0.2s all ease;
-  background-color: #8FE044;
-}
-
-.sideBar_transPin {
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: black;
-  margin: 0.25rem 0.25rem 0.25rem 1.75rem;
-  transition: 0.2s all ease;
-  border-radius: 50%;
-}
-
-.sideBar_transPin--active {
-  transition: 0.2s all ease;
-  background-color: black;
-  margin: 0.25rem 1.75rem 0.25rem 0.25rem;
+.index {
+  margin: 6rem;
 }
 
 .index_title {
@@ -696,17 +660,20 @@ a {
   overflow-y: auto;
 }
 
-.toc > .toc-list li {
+.toc-list li {
   list-style: none;
+  border-left: white 0.15rem solid;
+  padding-left: 2rem;
+}
+
+.is-active-li {
+  border-left: black 0.15rem solid !important;
+  padding-left: 2rem;
 }
 
 .toc-list {
-  margin: 0;
-  padding-left: 1.5rem;
-}
-
-.toc > .toc-list {
-  padding-left: 0;
+  margin-top: 1.5rem;
+  text-decoration: none;
 }
 
 a.toc-link {
@@ -716,6 +683,7 @@ a.toc-link {
   margin-bottom: 1rem;
   display: block;
   transition: 0.5s all ease;
+  text-decoration: none;
 }
 
 a.toc-link:hover {
@@ -746,13 +714,12 @@ a.toc-link:hover {
 .is-active-link::before {
   content: "";
   display: inline-block;
-  height: 2px;
-  width: 8px;
   background-color: white;
   visibility: visible;
-  margin: 0 .5rem 0 0;
+  margin: 0 0.5rem 0 0;
   top: -4px;
   position: relative;
+  text-decoration: none;
 }
 
 .node-name--H1 {
@@ -856,4 +823,65 @@ a.toc-link:hover {
 
 .dontTitle {
   color: #ea5149;
+}
+
+.toolBar {
+  padding: 6rem;
+}
+
+.toolBar_translate {
+  float: none;
+  display: block;
+}
+
+.toolBar_transtxt {
+  position: fixed;
+  right: 45rem;
+}
+
+.toolBar_transSwitch {
+  background-color: white;
+  width: 3.5rem;
+  height: 2rem;
+  display: inline-block;
+  position: fixed;
+  right: 50rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.toolBar_transSwitch--active {
+  transition: 0.2s all ease;
+  background-color: #8FE044;
+}
+
+.toolBar_transPin {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: black;
+  margin: 0.25rem 0.25rem 0.25rem 1.75rem;
+  transition: 0.2s all ease;
+  border-radius: 50%;
+}
+
+.toolBar_transPin--active {
+  transition: 0.2s all ease;
+  background-color: black;
+  margin: 0.25rem 1.75rem 0.25rem 0.25rem;
+}
+
+.toolBar_searchBox {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  position: fixed;
+  right: 39rem;
+}
+
+.toolBar_searchButton {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  position: fixed;
+  right: 39rem;
 }
