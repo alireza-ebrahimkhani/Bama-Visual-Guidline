@@ -1,6 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'Peyda';
+    src: url('platform/fonts/farsi/eot/Peyda-Thin.eot');
+    src: local('Peyda-Thin'), local('Peyda-Thin'),
+        url('platform/fonts/farsi/eot/Peyda-Thin.eot?#iefix') format('embedded-opentype'),
+        url('platform/fonts/farsi/woff2/Peyda-Thin.woff2') format('woff2'),
+        url('platform/fonts/farsi/woff/Peyda-Thin.woff') format('woff'),
+        url('platform/fonts/farsi/ttf/Peyda-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('platform/fonts/farsi/eot/Peyda-Light.eot');
+    src: local('Peyda-Light'), local('Peyda-Light'),
+        url('platform/fonts/farsi/eot/Peyda-Light.eot?#iefix') format('embedded-opentype'),
+        url('platform/fonts/farsi/woff2/Peyda-Light.woff2') format('woff2'),
+        url('platform/fonts/farsi/woff/Peyda-Light.woff') format('woff'),
+        url('platform/fonts/farsi/ttf/Peyda-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('platform/fonts/farsi/eot/Peyda-Regular.eot');
+    src: local('Peyda-Regular'), local('Peyda-Regular'),
+        url('platform/fonts/farsi/eot/Peyda-Regular.eot?#iefix') format('embedded-opentype'),
+        url('platform/fonts/farsi/woff2/Peyda-Regular.woff2') format('woff2'),
+        url('platform/fonts/farsi/woff/Peyda-Regular.woff') format('woff'),
+        url('platform/fonts/farsi/ttf/Peyda-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('platform/fonts/farsi/eot/Peyda-Medium.eot');
+    src: local('Peyda-Medium'), local('Peyda-Medium'),
+        url('platform/fonts/farsi/eot/Peyda-Medium.eot?#iefix') format('embedded-opentype'),
+        url('platform/fonts/farsi/woff2/Peyda-Medium.woff2') format('woff2'),
+        url('platform/fonts/farsi/woff/Peyda-Medium.woff') format('woff'),
+        url('platform/fonts/farsi/ttf/Peyda-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('platform/fonts/farsi/eot/Peyda-SemiBold.eot');
+    src: local('Peyda-SemiBold'), local('Peyda-SemiBold'),
+        url('platform/fonts/farsi/eot/Peyda-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('platform/fonts/farsi/woff2/Peyda-SemiBold.woff2') format('woff2'),
+        url('platform/fonts/farsi/woff/Peyda-SemiBold.woff') format('woff'),
+        url('platform/fonts/farsi/ttf/Peyda-SemiBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('platform/fonts/farsi/eot/Peyda-Bold.eot');
+    src: local('Peyda-Bold'), local('Peyda-Bold'),
+        url('platform/fonts/farsi/eot/Peyda-Bold.eot?#iefix') format('embedded-opentype'),
+        url('platform/fonts/farsi/woff2/Peyda-Bold.woff2') format('woff2'),
+        url('platform/fonts/farsi/woff/Peyda-Bold.woff') format('woff'),
+        url('platform/fonts/farsi/ttf/Peyda-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
 $enfont: 'Roboto', sans-serif;
-$fafont: 'yekan';
+$fafont: 'Peyda';
 
 @mixin type ($weight, $size, $spacing, $leading, $case){
     font-weight: $weight;
@@ -9,14 +77,15 @@ $fafont: 'yekan';
     line-height: $leading;
     text-transform: $case;
 }
+
+%enType{
+    font-family: $enfont;
+}
 %faType{
-    font-family: $fafont;
+    font-family: $fafont!important;
     direction: rtl;
     text-align: right;
     text-transform: unset;
-}
-%enType{
-    font-family: $enfont;
 }
 
 h1, .h1{
@@ -79,6 +148,7 @@ a{
     @extend %faType;
     display: none;
     &--show{
+        font-family: $fafont;
         display: block;
     }
 }
