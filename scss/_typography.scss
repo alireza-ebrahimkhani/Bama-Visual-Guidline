@@ -1,84 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-$enfont: 'Roboto', sans-serif;
-$fafont: 'yekan';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+$enfont: "Roboto", sans-serif;
+$fafont: "yekan";
 
-@mixin type ($weight, $size, $spacing, $leading, $case){
-    font-weight: $weight;
-    font-size: $size;
-    letter-spacing: $spacing;
-    line-height: $leading;
-    text-transform: $case;
+@mixin type($weight, $size, $spacing, $leading, $case) {
+  font-weight: $weight;
+  font-size: $size;
+  letter-spacing: $spacing;
+  line-height: $leading;
+  text-transform: $case;
 }
-%faType{
-    font-family: $fafont;
-    direction: rtl;
-    text-align: right;
-    text-transform: unset;
+%faType {
+  font-family: $fafont;
+  direction: rtl;
+  text-align: right;
+  text-transform: unset;
 }
-%enType{
-    font-family: $enfont;
+%enType {
+  font-family: $enfont;
 }
 
-h1, .h1{
-    @include type(300 , 12rem , -1.5 , auto , uppercase);
-    @extend %enType;
+h1,
+.h1 {
+  @include type(300, 12rem, -1.5, auto, uppercase);
+  @extend %enType;
 }
-h2, .h2{
-    @include type(300 , 7.5rem , -0.5 , auto , capitalize);
-    @extend %enType;
+h2,
+.h2 {
+  @include type(300, 7.5rem, -0.5, auto, capitalize);
+  @extend %enType;
 }
-h3, .h3{
-    @include type(400 , 6rem , 0 , auto , capitalize);
-    @extend %enType;
+h3,
+.h3 {
+  @include type(400, 6rem, 0, auto, capitalize);
+  @extend %enType;
 }
-h4, .h4{
-    @include type(400 , 4.25rem , 0.25 , auto , capitalize);
-    @extend %enType;
+h4,
+.h4 {
+  @include type(400, 4.25rem, 0.25, auto, capitalize);
+  @extend %enType;
 }
-h5, .h5{
-    @include type(400 , 3rem , 0 , auto , capitalize);
-    @extend %enType;
+h5,
+.h5 {
+  @include type(400, 3rem, 0, auto, capitalize);
+  @extend %enType;
 }
-h6, .h6{
-    @include type(500 , 2.5rem , 0.15 , auto , capitalize);
-    @extend %enType;
+h6,
+.h6 {
+  @include type(500, 2.5rem, 0.15, auto, capitalize);
+  @extend %enType;
 }
-.subtitle1{
-    @include type(400 , 2rem , 0.15 , auto , capitalize);
-    @extend %enType;
+.subtitle1 {
+  @include type(400, 2rem, 0.15, auto, capitalize);
+  @extend %enType;
 }
-.subtitle2{
-    @include type(500 , 1.75rem , 0.1 , auto , capitalize);
-    @extend %enType;
+.subtitle2 {
+  @include type(500, 1.75rem, 0.1, auto, capitalize);
+  @extend %enType;
 }
-.body1{
-    @include type(400 , 2rem , 0.5 , 3rem , capitalize);
-    @extend %enType;
+.body1 {
+  @include type(400, 2rem, 0.5, 3rem, capitalize);
+  @extend %enType;
 }
-.body2{
-    @include type(400 , 1.75rem , 0.25 , auto , capitalize);
-    @extend %enType;
+.body2 {
+  @include type(400, 1.75rem, 0.25, auto, capitalize);
+  @extend %enType;
 }
-.button{
-    @include type(500 , 1.75rem , 1.25 , auto , uppercase);
-    @extend %enType;
+.button {
+  @include type(500, 1.75rem, 1.25, auto, uppercase);
+  @extend %enType;
 }
-.caption{
-    @include type(400 , 1.5rem , 0.4 , auto , capitalize);
-    @extend %enType;
+.caption {
+  @include type(400, 1.5rem, 0.4, auto, capitalize);
+  @extend %enType;
 }
-.overline{
-    @include type(300 , 1.25rem , 1.5 , auto , capitalize);
-    @extend %enType;
+.overline {
+  @include type(300, 1.25rem, 1.5, auto, capitalize);
+  @extend %enType;
 }
-a{
-    @include type(400 , 2rem , 0.5 , auto , capitalize);
-    @extend %enType;
+a {
+  @include type(400, 2rem, 0.5, auto, capitalize);
+  @extend %enType;
 }
-.fa{
-    @extend %faType;
-    display: none;
-    &--show{
-        display: block;
-    }
+.fa {
+  @extend %faType;
+  display: none;
+  &--show {
+    display: block;
+  }
 }
