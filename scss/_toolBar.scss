@@ -1,0 +1,52 @@
+.toolBar {
+  padding: 6rem;
+  &_translate {
+    float: none;
+    display: block;
+  }
+  &_transtxt {
+    position: fixed;
+    right: 45rem;
+  }
+  &_transSwitch {
+    background-color: white;
+    width: 3.5rem;
+    height: 2rem;
+    display: inline-block;
+    position: fixed;
+    right: 50rem;
+    cursor: pointer;
+    transition: $fastMotion;
+    &--active {
+      transition: $fastMotion;
+      background-color: $green;
+    }
+  }
+  &_transPin {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: black;
+    margin: 0.25rem 0.25rem 0.25rem 1.75rem;
+    transition: $fastMotion;
+    border-radius: 50%;
+    &--active {
+      transition: $fastMotion;
+      background-color: black;
+      margin: 0.25rem 1.75rem 0.25rem 0.25rem;
+    }
+  }
+  &_searchBox {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    right: 39rem;
+  }
+  &_searchButton {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    right: 39rem;
+  }
+}
