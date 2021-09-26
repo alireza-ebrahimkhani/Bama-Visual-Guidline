@@ -9,6 +9,10 @@ html{
 body{
     background-color: lightgray;
 }
+img, svg{
+    display: block;
+}
 $fastMotion : 0.2s all ease;
 $mediumMotion : 0.5s all ease;
 $slowMotion : 0.8s all ease;
+

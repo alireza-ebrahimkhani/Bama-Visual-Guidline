@@ -1,0 +1,21 @@
+.whiteBg{
+    background-color: white;
+}
+.lazy-wrapper{
+    position: relative;
+}
+.lazy-wrapper svg, .lazy-wrapper img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.dontLine{
+    background-color: $red;
+    width: 100%;
+    height: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.dontTitle{
+    color: $red;
+}

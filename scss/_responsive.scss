@@ -1,5 +1,5 @@
 $xsScreen:320px;
-$sScreen:375px;
+$sScreen:414px;
 $mScreen:768px;
 $lScreen:1024px;
 $xlScreen:1440px;
@@ -26,6 +26,11 @@ $xlScreen:1440px;
 }
 @mixin xlScreen() {
     @media only screen and (max-width:$xlScreen){
+        @content;
+    }
+}
+@mixin xxlScreen() {
+    @media only screen and (min-width:$xlScreen){
         @content;
     }
 }

@@ -7,9 +7,8 @@
         cursor: pointer;
         padding: 2rem 0;
     }
-    &_header h3 {
+    &_header h6 {
         display: inline-block;
-        padding: 1rem 0;
     }
     &_body{
         max-height: 0;
@@ -17,10 +16,10 @@
         opacity: 0;
         transition: $fastMotion;
     }
-    &_item--active{
+    &_body--active{
         max-height: unset;
         opacity: 1;
-        padding: 2rem 0rem;
+        padding: 1rem 0rem;
         transition: $fastMotion;
     }
     &_icon{

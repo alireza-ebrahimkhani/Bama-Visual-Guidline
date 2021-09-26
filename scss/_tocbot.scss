@@ -1,0 +1,72 @@
+/* table of content start*/
+@import 'color';
+.toc {
+    overflow-y: auto;
+    
+  }
+  .toc > .toc-list {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .toc > .toc-list li {
+    list-style: none;
+  }
+  .toc-list {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+  .toc>.toc-list{
+    padding-left: 0;
+  }
+  a.toc-link {
+    color: black ;
+    height: 100%;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    transition: $mediumMotion;
+    &:hover{
+      color: grey ;
+      transition: $mediumMotion;
+    }
+  }
+  .is-collapsible {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: $mediumMotion;
+  }
+  .is-collapsed {
+    max-height: 0;
+    transition: $mediumMotion;
+      }
+  .is-position-fixed {
+    position: fixed ;
+    top: 10rem;
+    
+
+  }
+  .is-active-link {
+    color: black !important;
+  }
+
+  .is-active-link::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 8px;
+    background-color: white;
+    visibility: visible;
+    margin:0 .5rem 0 0;
+    top: -4px;
+    position: relative;
+    
+  }
+  .node-name--H1{
+      text-transform: uppercase;
+      font-weight: 300;
+  }
+  .node-name--H2{
+    font-size: 1.75rem !important;
+  }
+  /* table of content end*/
