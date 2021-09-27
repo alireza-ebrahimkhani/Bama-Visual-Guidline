@@ -15,6 +15,9 @@ aside{
     @include xxlScreen(){
         right: calc(((100% - 1440px) / 2));
     }
+    @include lScreen(){
+        display: none;
+    }
 }
 .sSpace{
     margin-bottom: 1rem !important;
@@ -23,7 +26,7 @@ aside{
     margin-bottom: 3rem !important;
 }
 .lSpace{
-    margin-bottom: 12rem !important;
+    margin-bottom: 8rem !important;
 }
 
 .full-bleed{
@@ -36,7 +39,7 @@ aside{
     @include lScreen(){
         padding: 0 6rem;
     }
-    @include sScreen(){
+    @include mScreen(){
         padding: 0 3rem;
     }
 }

@@ -41,6 +41,12 @@ aside {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  aside {
+    display: none;
+  }
+}
+
 .sSpace {
   margin-bottom: 1rem !important;
 }
@@ -50,7 +56,7 @@ aside {
 }
 
 .lSpace {
-  margin-bottom: 12rem !important;
+  margin-bottom: 8rem !important;
 }
 
 .boxed {
@@ -65,7 +71,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   .boxed {
     padding: 0 3rem;
   }
@@ -84,7 +90,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
   .row {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -100,7 +106,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
   .col-full {
     grid-column: span 4;
   }
@@ -116,7 +122,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
   .col-half {
     grid-column: span 4;
   }
@@ -132,7 +138,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
   .col-third {
     grid-column: span 4;
   }
@@ -148,7 +154,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
   .col-quarter {
     grid-column: span 4;
   }
@@ -282,7 +288,7 @@ h6, .h6 {
   font-size: 2rem;
   letter-spacing: 0.5;
   line-height: 3rem;
-  text-transform: capitalize;
+  text-transform: unset;
 }
 
 .body2 {
@@ -290,7 +296,7 @@ h6, .h6 {
   font-size: 1.75rem;
   letter-spacing: 0.25;
   line-height: auto;
-  text-transform: capitalize;
+  text-transform: unset;
 }
 
 .button {
@@ -306,7 +312,7 @@ h6, .h6 {
   font-size: 1.5rem;
   letter-spacing: 0.4;
   line-height: auto;
-  text-transform: capitalize;
+  text-transform: unset;
 }
 
 .overline {
@@ -314,7 +320,7 @@ h6, .h6 {
   font-size: 1.25rem;
   letter-spacing: 1.5;
   line-height: auto;
-  text-transform: capitalize;
+  text-transform: unset;
 }
 
 a {
@@ -322,7 +328,15 @@ a {
   font-size: 2rem;
   letter-spacing: 0.5;
   line-height: auto;
-  text-transform: capitalize;
+  text-transform: unset;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s all ease;
+}
+
+a:hover {
+  color: grey;
+  transition: 0.2s all ease;
 }
 
 .fa {
@@ -346,7 +360,7 @@ a {
   transition: 0.5s all ease;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   .header_logo {
     left: 3rem;
     top: 3rem;
@@ -380,7 +394,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   .header_hamIco {
     bottom: 3rem;
     left: 3rem;
@@ -471,7 +485,7 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   .header_copyRight {
     bottom: 4.5rem;
   }
@@ -503,7 +517,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   .header_popup {
     bottom: 3rem;
     left: 3rem;
@@ -531,7 +545,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   .header_popup--open {
     width: 100%;
     height: 100vh;
@@ -580,14 +594,6 @@ a {
 .footer {
   width: 100%;
   height: 30rem;
-}
-
-.index {
-  margin: 6rem;
-}
-
-.index_title {
-  text-transform: uppercase;
 }
 
 .accordion_list {
@@ -649,45 +655,112 @@ a {
   transition: .3s all ease;
 }
 
-/* table of content start*/
-.toc {
-  overflow-y: auto;
+.index {
+  margin: 8.5rem 0;
+  display: inline-block;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1024px) {
+  .index {
+    margin-top: 0.75rem;
+    margin-left: 3rem;
+    min-width: 25rem;
+    overflow: hidden;
+    background-color: #ffffff5b;
+    border-radius: 3rem;
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .index {
+    display: none;
+  }
+}
+
+.index_title {
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1024px) {
+  .index_title {
+    padding: 2rem;
+    line-height: 2rem;
+    cursor: pointer;
+  }
+  .index_title::after {
+    content: url(platform/icons/down.svg);
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 2rem;
+    transition: 0.5s all ease;
+  }
+  .index_title--open::after {
+    transform: rotate(180deg);
+    transition: 0.5s all ease;
+  }
+}
+
+.index_nav {
+  transition: 0.5s all ease;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+  .index_nav {
+    max-height: 0;
+  }
+}
+
+.index_nav--open {
+  max-height: 100vh;
+  transition: 0.5s all ease;
 }
 
 .toc > .toc-list {
   position: relative;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .toc-list li {
   list-style: none;
-  border-left: white 0.15rem solid;
+  border-left: white 0.25rem solid;
   padding-left: 2rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .toc-list li {
+    border-left: unset;
+  }
+}
+
 .is-active-li {
-  border-left: black 0.15rem solid !important;
+  border-left: black 0.25rem solid !important;
   padding-left: 2rem;
 }
 
 .toc-list {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 3rem 0;
   text-decoration: none;
 }
 
 a.toc-link {
-  color: black;
+  color: rgba(0, 0, 0, 0.7);
   height: 100%;
   font-size: 2rem;
-  margin-bottom: 1rem;
   display: block;
   transition: 0.5s all ease;
   text-decoration: none;
+  padding: 1rem 0;
+  text-transform: capitalize;
 }
 
 a.toc-link:hover {
-  color: grey;
+  color: black;
   transition: 0.5s all ease;
 }
 
@@ -709,17 +782,6 @@ a.toc-link:hover {
 
 .is-active-link {
   color: black !important;
-}
-
-.is-active-link::before {
-  content: "";
-  display: inline-block;
-  background-color: white;
-  visibility: visible;
-  margin: 0 0.5rem 0 0;
-  top: -4px;
-  position: relative;
-  text-decoration: none;
 }
 
 .node-name--H1 {
@@ -825,18 +887,65 @@ a.toc-link:hover {
   color: #ea5149;
 }
 
+h1 {
+  margin-left: -0.75rem;
+}
+
+h2 {
+  margin-left: -0.5rem;
+}
+
 .toolBar {
-  padding: 6rem;
+  width: calc(100% - 45rem);
+  height: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 39rem;
+  z-index: 10;
+  text-align: right;
+}
+
+@media only screen and (min-width: 1440px) {
+  .toolBar {
+    width: calc(1440px - 45rem);
+    right: calc(((100% - 1440px) / 2) + 39rem);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .toolBar {
+    width: calc(100% - 12rem);
+    right: 6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .toolBar {
+    width: calc(100% - 6rem);
+    right: 3rem;
+    top: 3rem;
+  }
+}
+
+.toolBar_wrapper {
+  display: inline-block;
 }
 
 .toolBar_translate {
-  float: none;
-  display: block;
+  margin: 2.5rem 0 0 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .toolBar_translate {
+    float: left;
+  }
 }
 
 .toolBar_transtxt {
-  position: fixed;
-  right: 45rem;
+  display: inline-block;
+  line-height: 2rem;
+  position: relative;
+  top: -1px;
 }
 
 .toolBar_transSwitch {
@@ -844,9 +953,15 @@ a.toc-link:hover {
   width: 3.5rem;
   height: 2rem;
   display: inline-block;
-  position: fixed;
   right: 50rem;
   cursor: pointer;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+  transition: 0.2s all ease;
+}
+
+.toolBar_transSwitch:hover {
+  background-color: rgba(255, 255, 255, 0.5);
   transition: 0.2s all ease;
 }
 
@@ -855,11 +970,16 @@ a.toc-link:hover {
   background-color: #8FE044;
 }
 
+.toolBar_transSwitch--active:hover {
+  background-color: #a9e770;
+  transition: 0.2s all ease;
+}
+
 .toolBar_transPin {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   background-color: black;
-  margin: 0.25rem 0.25rem 0.25rem 1.75rem;
+  margin: 0.5rem 0.5rem 0.5rem 2rem;
   transition: 0.2s all ease;
   border-radius: 50%;
 }
@@ -867,7 +987,7 @@ a.toc-link:hover {
 .toolBar_transPin--active {
   transition: 0.2s all ease;
   background-color: black;
-  margin: 0.25rem 1.75rem 0.25rem 0.25rem;
+  margin: 0.5rem 1.5rem 0.5rem 0.5rem;
 }
 
 .toolBar_searchBox {

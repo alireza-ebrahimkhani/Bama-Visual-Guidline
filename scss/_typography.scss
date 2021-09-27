@@ -121,11 +121,11 @@ h6, .h6{
     @extend %enType;
 }
 .body1{
-    @include type(400 , 2rem , 0.5 , 3rem , capitalize);
+    @include type(400 , 2rem , 0.5 , 3rem , unset);
     @extend %enType;
 }
 .body2{
-    @include type(400 , 1.75rem , 0.25 , auto , capitalize);
+    @include type(400 , 1.75rem , 0.25 , auto , unset);
     @extend %enType;
 }
 .button{
@@ -133,16 +133,23 @@ h6, .h6{
     @extend %enType;
 }
 .caption{
-    @include type(400 , 1.5rem , 0.4 , auto , capitalize);
+    @include type(400 , 1.5rem , 0.4 , auto , unset);
     @extend %enType;
 }
 .overline{
-    @include type(300 , 1.25rem , 1.5 , auto , capitalize);
+    @include type(300 , 1.25rem , 1.5 , auto , unset);
     @extend %enType;
 }
 a{
-    @include type(400 , 2rem , 0.5 , auto , capitalize);
+    @include type(400 , 2rem , 0.5 , auto , unset);
     @extend %enType;
+    text-decoration: none;
+    color: black;
+    transition: $fastMotion;
+    &:hover{
+        color: grey;
+        transition: $fastMotion;
+    }
 }
 .fa{
     @extend %faType;

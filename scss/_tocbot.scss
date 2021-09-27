@@ -1,38 +1,89 @@
-/* table of content start*/
-@import "color";
-.toc {
-  overflow-y: auto;
+.index {
+  margin: 8.5rem 0;
+  display: inline-block;
+  text-align: left;
+  @include lScreen(){
+    margin-top: 0.75rem;
+    margin-left: 3rem;
+    min-width: 25rem;
+    overflow: hidden;
+    background-color: #ffffff5b;
+    border-radius: 3rem;
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+  }
+  @include sScreen(){
+    display: none;
+  }
+  &_title {
+    text-transform: uppercase;
+    @include lScreen(){
+      padding: 2rem;
+      line-height: 2rem;
+      cursor: pointer;
+      &::after{
+        content: url(platform/icons/down.svg);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 2rem;
+        transition: $mediumMotion;
+      }
+      &--open{
+        &::after{
+          transform: rotate(180deg);
+          transition: $mediumMotion;
+        }
+      }
+    }
+    
+  }
+  &_nav{
+    transition: $mediumMotion;
+    overflow: hidden;
+    @include lScreen(){
+      max-height: 0;
+    }
+    &--open{
+      max-height: 100vh;
+      transition: $mediumMotion;
+    }
+  }
 }
+
 .toc > .toc-list {
   position: relative;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 .toc-list li {
   list-style: none;
-  border-left: white 0.15rem solid;
+  border-left: white 0.25rem solid;
   padding-left: 2rem;
+  @include lScreen(){
+    border-left: unset;
+  }
 }
 .is-active-li {
-  border-left: black 0.15rem solid !important;
+  border-left: black 0.25rem solid !important;
   padding-left: 2rem;
 }
 .toc-list {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 3rem 0;
   text-decoration: none;
 }
 
 a.toc-link {
-  color: black;
+  color: rgba(0, 0, 0, 0.7);
   height: 100%;
   font-size: 2rem;
-  margin-bottom: 1rem;
   display: block;
   transition: $mediumMotion;
   text-decoration: none;
-
+  padding: 1rem 0;
+  text-transform: capitalize;
   &:hover {
-    color: grey;
+    color: black;
     transition: $mediumMotion;
   }
 }
@@ -54,17 +105,6 @@ a.toc-link {
   color: black !important;
 }
 
-.is-active-link::before {
-  content: "";
-  display: inline-block;
-
-  background-color: white;
-  visibility: visible;
-  margin: 0 0.5rem 0 0;
-  top: -4px;
-  position: relative;
-  text-decoration: none;
-}
 .node-name--H1 {
   text-transform: uppercase;
   font-weight: 300;
