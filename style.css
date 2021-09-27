@@ -508,6 +508,7 @@ a:hover {
   border-radius: 6rem;
   transition: 0.5s all ease;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(20px);
   -moz-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
