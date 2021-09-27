@@ -96,7 +96,7 @@ $fafont: "Peyda";
 
 h1,
 .h1 {
-  @include type(400, 12rem, -1.5, 1, uppercase);
+  @include type(400, 15rem, -1.5, 1, uppercase);
   @extend %enType;
 }
 h2,

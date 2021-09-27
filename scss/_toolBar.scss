@@ -1,18 +1,10 @@
 .toolBar {
-  width: 100%;
+  width: calc(1440px - 12rem);
   max-width: 1440px;
   position: fixed;
   top: 6rem;
   left: calc(((100% - 1440px) / 2) + 6rem);
-
-  &_wrapper {
-    display: grid;
-    grid-template-columns: 31rem 9rem 7rem auto;
-    grid-gap: 2rem;
-    @include mScreen() {
-      grid-template-columns: auto 9rem 3rem 3rem 25rem;
-    }
-  }
+  z-index: 10;
   @include xlScreen() {
     width: calc(100% - 12rem);
     left: 6rem;
@@ -21,30 +13,24 @@
     width: calc(100% - 6rem);
     left: 3rem;
   }
-  /*
-  height: 7rem;
-  position: fixed;
-  top: 6rem;
-  right: unset;
-  z-index: 10;
-  text-align: right;
-  padding: 0px 0rem 0 44rem;
-  @include xxlScreen() {
-    width: 100%;
-  }
-  @include lScreen() {
-    width: calc(100% - 12rem);
-    right: 6rem;
-  }
-  @include mScreen() {
-    width: calc(100% - 6rem);
-    right: 3rem;
-    top: 3rem;
-  }
   &_wrapper {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 31rem 9rem 7rem auto;
+    grid-gap: 2rem;
+    @include lScreen() {
+      grid-template-columns: auto 9rem 7rem 7rem 25rem;
+    }
+    @include mScreen() {
+      grid-template-columns: auto 9rem 3rem 3rem 25rem;
+    }
   }
-  */
+  &_logo {
+    position: relative;
+    z-index: 1000;
+  }
+  &_logoSvg {
+    height: 7rem;
+  }
   &_translate {
     align-self: center;
     @include lScreen() {

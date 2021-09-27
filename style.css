@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -24,7 +23,7 @@ main {
 
 article {
   width: 100%;
-  padding-top: 18rem;
+  padding-top: 19.5rem;
 }
 
 .sSpace {
@@ -41,7 +40,7 @@ article {
 
 .boxed {
   max-width: 1440px;
-  padding: 0 0rem 0 39rem;
+  padding: 0 6rem 0 39rem;
   margin: 0 auto;
 }
 
@@ -58,25 +57,21 @@ article {
 }
 
 .row {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 3rem;
   margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
   .row {
-    -ms-grid-columns: (1fr)[8];
-        grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
 @media only screen and (max-width: 500px) {
   .row {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -212,7 +207,7 @@ h1,
 h1,
 .h1 {
   font-weight: 400;
-  font-size: 12rem;
+  font-size: 15rem;
   letter-spacing: -1.5;
   line-height: 1;
   text-transform: uppercase;
@@ -327,13 +322,11 @@ a {
   text-transform: unset;
   text-decoration: none;
   color: black;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
 a:hover {
   color: grey;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -348,26 +341,6 @@ a:hover {
 .header {
   position: relative;
   z-index: 200;
-  /*
-    &_logo{
-        
-        position: fixed;
-        top: 6rem;
-        left: 6rem; 
-        display: inline-block;
-        transition: $mediumMotion;
-        @include mScreen(){
-            left: 3rem; 
-            top: 3rem;
-        }
-        @include xxlScreen(){
-            left: calc(((100% - 1440px) / 2) + 6rem);
-        }
-    }*/
-}
-
-.header_logoSvg {
-  height: 7rem;
 }
 
 .header_hamIco {
@@ -377,7 +350,6 @@ a:hover {
   bottom: 6rem;
   left: 6rem;
   border-radius: 4rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   cursor: pointer;
 }
@@ -403,10 +375,8 @@ a:hover {
   top: 50%;
   left: 50%;
   border-radius: 4rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background: white;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -415,7 +385,6 @@ a:hover {
   width: 8rem;
   height: 8rem;
   background: white;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -423,7 +392,6 @@ a:hover {
   content: "";
   width: 8rem;
   height: 8rem;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -434,8 +402,7 @@ a:hover {
   top: 6rem;
   left: 4rem;
   position: absolute;
-  -webkit-transform: translate(-2rem, -2rem);
-          transform: translate(-2rem, -2rem);
+  transform: translate(-2rem, -2rem);
   z-index: 2;
 }
 
@@ -446,7 +413,6 @@ a:hover {
   background-color: black;
   position: absolute;
   top: -1.25rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -457,19 +423,16 @@ a:hover {
   background-color: black;
   position: absolute;
   top: 1.25rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
 .header_line--open::before {
   top: 0rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
 .header_line--open::after {
   top: 0rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -480,7 +443,6 @@ a:hover {
   bottom: 6rem;
   padding-right: 4rem;
   opacity: 0;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -498,7 +460,6 @@ a:hover {
 .header_accordion {
   width: 100%;
   opacity: 0;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -509,10 +470,8 @@ a:hover {
   position: fixed;
   bottom: 6rem;
   left: 6rem;
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
+  transform-origin: bottom center;
   border-radius: 6rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -539,7 +498,6 @@ a:hover {
   bottom: 3rem;
   left: 3rem;
   border-radius: 0rem;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -567,10 +525,8 @@ a:hover {
 .header_popup--open .header_accordion,
 .header_popup--open .header_copyRight {
   opacity: 1;
-  -webkit-transition: 0.8s all ease;
   transition: 0.8s all ease;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 
 .header_menu {
@@ -599,13 +555,11 @@ a:hover {
   text-transform: capitalize;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
 .header_item a:hover {
   color: black;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -633,8 +587,10 @@ a:hover {
 
 @media only screen and (max-width: 1024px) {
   .index {
-    margin-top: 0.75rem;
-    margin-left: 3rem;
+    left: unset;
+    right: 3rem;
+    margin-top: 6.5rem;
+    margin-left: 0;
     min-width: 25rem;
     overflow: hidden;
     background-color: #ffffff5b;
@@ -683,19 +639,15 @@ a:hover {
     height: 2rem;
     position: absolute;
     right: 2rem;
-    -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
   }
   .index_dynamicTitle--open::after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transition: 0.5s all ease;
+    transform: rotate(180deg);
     transition: 0.5s all ease;
   }
 }
 
 .index_nav {
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   overflow: hidden;
 }
@@ -708,7 +660,6 @@ a:hover {
 
 .index_nav--open {
   max-height: 100vh;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -745,7 +696,6 @@ a.toc-link {
   height: 100%;
   font-size: 2rem;
   display: block;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   text-decoration: none;
   padding: 1rem 0;
@@ -754,20 +704,17 @@ a.toc-link {
 
 a.toc-link:hover {
   color: black;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
 .is-collapsible {
   max-height: 1000px;
   overflow: hidden;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
 .is-collapsed {
   max-height: 0;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -808,7 +755,6 @@ a.toc-link:hover {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -816,7 +762,6 @@ a.toc-link:hover {
   max-height: unset;
   opacity: 1;
   padding: 1rem 0rem;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -843,13 +788,11 @@ a.toc-link:hover {
   position: absolute;
   left: 1.5rem;
   top: 0.5rem;
-  -webkit-transition: .3s all ease;
   transition: .3s all ease;
 }
 
 .accordion_lineII--open {
   height: 0px !important;
-  -webkit-transition: .3s all ease;
   transition: .3s all ease;
 }
 
@@ -885,14 +828,12 @@ a.toc-link:hover {
 }
 
 .imgComparison__silder {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   position: relative;
   width: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   height: 1px;
   background: gray;
   outline: none;
@@ -907,19 +848,16 @@ a.toc-link:hover {
   background: black;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: .3s all ease;
   transition: .3s all ease;
 }
 
 .imgComparison__silder::-webkit-slider-thumb:hover {
   background: #8FE044;
-  -webkit-transition: .3s all ease;
   transition: .3s all ease;
 }
 
 .imgComparison__silder::-moz-range-thumb {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   width: 16px;
   height: 8px;
@@ -963,35 +901,12 @@ h2 {
 }
 
 .toolBar {
-  width: 100%;
+  width: calc(1440px - 12rem);
   max-width: 1440px;
   position: fixed;
   top: 6rem;
   left: calc(((100% - 1440px) / 2) + 6rem);
-  /*
-  height: 7rem;
-  position: fixed;
-  top: 6rem;
-  right: unset;
   z-index: 10;
-  text-align: right;
-  padding: 0px 0rem 0 44rem;
-  @include xxlScreen() {
-    width: 100%;
-  }
-  @include lScreen() {
-    width: calc(100% - 12rem);
-    right: 6rem;
-  }
-  @include mScreen() {
-    width: calc(100% - 6rem);
-    right: 3rem;
-    top: 3rem;
-  }
-  &_wrapper {
-    display: inline-block;
-  }
-  */
   /*
   &_searchBox {
     width: 2rem;
@@ -1010,21 +925,6 @@ h2 {
   */
 }
 
-.toolBar_wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 31rem 9rem 7rem auto;
-      grid-template-columns: 31rem 9rem 7rem auto;
-  grid-gap: 2rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .toolBar_wrapper {
-    -ms-grid-columns: auto 9rem 3rem 3rem 25rem;
-        grid-template-columns: auto 9rem 3rem 3rem 25rem;
-  }
-}
-
 @media only screen and (max-width: 1440px) {
   .toolBar {
     width: calc(100% - 12rem);
@@ -1039,10 +939,35 @@ h2 {
   }
 }
 
+.toolBar_wrapper {
+  display: grid;
+  grid-template-columns: 31rem 9rem 7rem auto;
+  grid-gap: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .toolBar_wrapper {
+    grid-template-columns: auto 9rem 7rem 7rem 25rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .toolBar_wrapper {
+    grid-template-columns: auto 9rem 3rem 3rem 25rem;
+  }
+}
+
+.toolBar_logo {
+  position: relative;
+  z-index: 1000;
+}
+
+.toolBar_logoSvg {
+  height: 7rem;
+}
+
 .toolBar_translate {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1052,9 +977,7 @@ h2 {
 }
 
 .toolBar_logOut {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .toolBar_transtxt {
@@ -1073,25 +996,21 @@ h2 {
   cursor: pointer;
   margin-right: 0.5rem;
   border-radius: 1rem;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
 .toolBar_transSwitch:hover {
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
 .toolBar_transSwitch--active {
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
   background-color: #8FE044;
 }
 
 .toolBar_transSwitch--active:hover {
   background-color: #a9e770;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
@@ -1100,23 +1019,17 @@ h2 {
   height: 1rem;
   background-color: black;
   margin: 0.5rem 0.5rem 0.5rem 2rem;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
   border-radius: 50%;
 }
 
 .toolBar_transPin--active {
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
   background-color: black;
   margin: 0.5rem 1.5rem 0.5rem 0.5rem;
 }
 
 .toolBar_search {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: right;
-      justify-self: right;
+  align-self: center;
+  justify-self: right;
 }
-/*# sourceMappingURL=style.css.map */

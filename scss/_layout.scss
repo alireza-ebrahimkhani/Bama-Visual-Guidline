@@ -3,7 +3,7 @@ main {
 }
 article {
   width: 100%;
-  padding-top: 18rem;
+  padding-top: 19.5rem;
 }
 .index {
 }
@@ -21,7 +21,7 @@ article {
 }
 .boxed {
   max-width: 1440px;
-  padding: 0 0rem 0 39rem;
+  padding: 0 6rem 0 39rem;
   margin: 0 auto;
   @include lScreen() {
     padding: 0 6rem;

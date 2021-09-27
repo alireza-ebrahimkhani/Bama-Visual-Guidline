@@ -12,8 +12,10 @@
     left: 6rem;
   }
   @include lScreen() {
-    margin-top: 0.75rem;
-    margin-left: 3rem;
+    left: unset;
+    right: 3rem;
+    margin-top: 6.5rem;
+    margin-left: 0;
     min-width: 25rem;
     overflow: hidden;
     background-color: #ffffff5b;
