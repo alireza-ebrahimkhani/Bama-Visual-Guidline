@@ -180,7 +180,9 @@
         }
     }
     &_menu{
-        padding: 15rem 3rem 0 3rem;
+        padding: 0rem 3rem 0 3rem;
+        position: relative;
+        top: 15rem;
     }
     &_accordion{
         & h6{
