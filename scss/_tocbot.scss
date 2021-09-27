@@ -9,16 +9,25 @@
     overflow: hidden;
     background-color: #ffffff5b;
     border-radius: 3rem;
-    -webkit-backdrop-filter: blur(20px);
-    -moz-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
   @include sScreen(){
     display: none;
   }
-  &_title {
+  &_fixTitle {
+    display: block;
     text-transform: uppercase;
     @include lScreen(){
+      display: none;
+    }
+  }
+  &_dynamicTitle {
+    display: none;
+    text-transform: uppercase;
+    @include lScreen(){
+      display: block;
       padding: 2rem;
       line-height: 2rem;
       cursor: pointer;
@@ -37,7 +46,6 @@
         }
       }
     }
-    
   }
   &_nav{
     transition: $mediumMotion;

@@ -508,9 +508,9 @@ a:hover {
   border-radius: 6rem;
   transition: 0.5s all ease;
   overflow: hidden;
-  -webkit-backdrop-filter: blur(20px);
-  -moz-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 @media only screen and (min-width: 1440px) {
@@ -671,9 +671,9 @@ a:hover {
     overflow: hidden;
     background-color: #ffffff5b;
     border-radius: 3rem;
-    -webkit-backdrop-filter: blur(20px);
-    -moz-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 }
 
@@ -683,17 +683,30 @@ a:hover {
   }
 }
 
-.index_title {
+.index_fixTitle {
+  display: block;
   text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1024px) {
-  .index_title {
+  .index_fixTitle {
+    display: none;
+  }
+}
+
+.index_dynamicTitle {
+  display: none;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1024px) {
+  .index_dynamicTitle {
+    display: block;
     padding: 2rem;
     line-height: 2rem;
     cursor: pointer;
   }
-  .index_title::after {
+  .index_dynamicTitle::after {
     content: url(platform/icons/down.svg);
     width: 2rem;
     height: 2rem;
@@ -701,7 +714,7 @@ a:hover {
     right: 2rem;
     transition: 0.5s all ease;
   }
-  .index_title--open::after {
+  .index_dynamicTitle--open::after {
     transform: rotate(180deg);
     transition: 0.5s all ease;
   }
