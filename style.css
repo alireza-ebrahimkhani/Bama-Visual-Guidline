@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -24,28 +24,7 @@ main {
 
 article {
   width: 100%;
-  padding-top: 23rem;
-}
-
-aside {
-  width: 31rem;
-  position: fixed;
-  right: 0;
-  z-index: 10;
-  top: 0;
-  height: 100vh;
-}
-
-@media only screen and (min-width: 1440px) {
-  aside {
-    right: calc(((100% - 1440px) / 2));
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  aside {
-    display: none;
-  }
+  padding-top: 18rem;
 }
 
 .sSpace {
@@ -62,7 +41,7 @@ aside {
 
 .boxed {
   max-width: 1440px;
-  padding: 0 39rem 0  6rem;
+  padding: 0 0rem 0 39rem;
   margin: 0 auto;
 }
 
@@ -166,7 +145,7 @@ aside {
 }
 
 @font-face {
-  font-family: 'Peyda';
+  font-family: "Peyda";
   src: url("platform/fonts/farsi/eot/Peyda-Thin.eot");
   src: local("Peyda-Thin"), local("Peyda-Thin"), url("platform/fonts/farsi/eot/Peyda-Thin.eot?#iefix") format("embedded-opentype"), url("platform/fonts/farsi/woff2/Peyda-Thin.woff2") format("woff2"), url("platform/fonts/farsi/woff/Peyda-Thin.woff") format("woff"), url("platform/fonts/farsi/ttf/Peyda-Thin.ttf") format("truetype");
   font-weight: 100;
@@ -174,7 +153,7 @@ aside {
 }
 
 @font-face {
-  font-family: 'Peyda';
+  font-family: "Peyda";
   src: url("platform/fonts/farsi/eot/Peyda-Light.eot");
   src: local("Peyda-Light"), local("Peyda-Light"), url("platform/fonts/farsi/eot/Peyda-Light.eot?#iefix") format("embedded-opentype"), url("platform/fonts/farsi/woff2/Peyda-Light.woff2") format("woff2"), url("platform/fonts/farsi/woff/Peyda-Light.woff") format("woff"), url("platform/fonts/farsi/ttf/Peyda-Light.ttf") format("truetype");
   font-weight: 300;
@@ -182,7 +161,7 @@ aside {
 }
 
 @font-face {
-  font-family: 'Peyda';
+  font-family: "Peyda";
   src: url("platform/fonts/farsi/eot/Peyda-Regular.eot");
   src: local("Peyda-Regular"), local("Peyda-Regular"), url("platform/fonts/farsi/eot/Peyda-Regular.eot?#iefix") format("embedded-opentype"), url("platform/fonts/farsi/woff2/Peyda-Regular.woff2") format("woff2"), url("platform/fonts/farsi/woff/Peyda-Regular.woff") format("woff"), url("platform/fonts/farsi/ttf/Peyda-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -190,7 +169,7 @@ aside {
 }
 
 @font-face {
-  font-family: 'Peyda';
+  font-family: "Peyda";
   src: url("platform/fonts/farsi/eot/Peyda-Medium.eot");
   src: local("Peyda-Medium"), local("Peyda-Medium"), url("platform/fonts/farsi/eot/Peyda-Medium.eot?#iefix") format("embedded-opentype"), url("platform/fonts/farsi/woff2/Peyda-Medium.woff2") format("woff2"), url("platform/fonts/farsi/woff/Peyda-Medium.woff") format("woff"), url("platform/fonts/farsi/ttf/Peyda-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -198,7 +177,7 @@ aside {
 }
 
 @font-face {
-  font-family: 'Peyda';
+  font-family: "Peyda";
   src: url("platform/fonts/farsi/eot/Peyda-SemiBold.eot");
   src: local("Peyda-SemiBold"), local("Peyda-SemiBold"), url("platform/fonts/farsi/eot/Peyda-SemiBold.eot?#iefix") format("embedded-opentype"), url("platform/fonts/farsi/woff2/Peyda-SemiBold.woff2") format("woff2"), url("platform/fonts/farsi/woff/Peyda-SemiBold.woff") format("woff"), url("platform/fonts/farsi/ttf/Peyda-SemiBold.ttf") format("truetype");
   font-weight: 700;
@@ -206,15 +185,21 @@ aside {
 }
 
 @font-face {
-  font-family: 'Peyda';
+  font-family: "Peyda";
   src: url("platform/fonts/farsi/eot/Peyda-Bold.eot");
   src: local("Peyda-Bold"), local("Peyda-Bold"), url("platform/fonts/farsi/eot/Peyda-Bold.eot?#iefix") format("embedded-opentype"), url("platform/fonts/farsi/woff2/Peyda-Bold.woff2") format("woff2"), url("platform/fonts/farsi/woff/Peyda-Bold.woff") format("woff"), url("platform/fonts/farsi/ttf/Peyda-Bold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .subtitle1, .subtitle2, .body1, .body2, .button, .caption, .overline, a {
-  font-family: "Roboto", sans-serif;
+h1,
+.h1, h2,
+.h2, h3,
+.h3, h4,
+.h4, h5,
+.h5, h6,
+.h6, .subtitle1, .subtitle2, .body1, .body2, .button, .caption, .overline, a {
+  font-family: "Poppins", sans-serif;
 }
 
 .fa {
@@ -224,23 +209,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .subtitle1, .subtitle2, .b
   text-transform: unset;
 }
 
-h1, .h1 {
-  font-weight: 300;
+h1,
+.h1 {
+  font-weight: 400;
   font-size: 12rem;
   letter-spacing: -1.5;
-  line-height: auto;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-weight: 300;
   font-size: 7.5rem;
   letter-spacing: -0.5;
-  line-height: auto;
+  line-height: 1;
   text-transform: capitalize;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-weight: 400;
   font-size: 6rem;
   letter-spacing: 0;
@@ -248,7 +236,8 @@ h3, .h3 {
   text-transform: capitalize;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-weight: 400;
   font-size: 4.25rem;
   letter-spacing: 0.25;
@@ -256,7 +245,8 @@ h4, .h4 {
   text-transform: capitalize;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-weight: 400;
   font-size: 3rem;
   letter-spacing: 0;
@@ -264,7 +254,8 @@ h5, .h5 {
   text-transform: capitalize;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-weight: 500;
   font-size: 2.5rem;
   letter-spacing: 0.15;
@@ -357,28 +348,22 @@ a:hover {
 .header {
   position: relative;
   z-index: 200;
-}
-
-.header_logo {
-  position: fixed;
-  top: 6rem;
-  left: 6rem;
-  display: inline-block;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-}
-
-@media only screen and (max-width: 768px) {
-  .header_logo {
-    left: 3rem;
-    top: 3rem;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .header_logo {
-    left: calc(((100% - 1440px) / 2) + 6rem);
-  }
+  /*
+    &_logo{
+        
+        position: fixed;
+        top: 6rem;
+        left: 6rem; 
+        display: inline-block;
+        transition: $mediumMotion;
+        @include mScreen(){
+            left: 3rem; 
+            top: 3rem;
+        }
+        @include xxlScreen(){
+            left: calc(((100% - 1440px) / 2) + 6rem);
+        }
+    }*/
 }
 
 .header_logoSvg {
@@ -411,7 +396,7 @@ a:hover {
 }
 
 .header_hamIco::after {
-  content: '';
+  content: "";
   width: 0rem;
   height: 0rem;
   position: absolute;
@@ -426,7 +411,7 @@ a:hover {
 }
 
 .header_hamIco:hover::after {
-  content: '';
+  content: "";
   width: 8rem;
   height: 8rem;
   background: white;
@@ -435,7 +420,7 @@ a:hover {
 }
 
 .header_hamIco--open::after {
-  content: '';
+  content: "";
   width: 8rem;
   height: 8rem;
   -webkit-transition: 0.2s all ease;
@@ -444,7 +429,7 @@ a:hover {
 
 .header_line {
   width: 4rem;
-  height: .125rem;
+  height: 0.125rem;
   background-color: black;
   top: 6rem;
   left: 4rem;
@@ -455,9 +440,9 @@ a:hover {
 }
 
 .header_line::before {
-  content: '';
+  content: "";
   width: 4rem;
-  height: .125rem;
+  height: 0.125rem;
   background-color: black;
   position: absolute;
   top: -1.25rem;
@@ -466,9 +451,9 @@ a:hover {
 }
 
 .header_line::after {
-  content: '';
+  content: "";
   width: 4rem;
-  height: .125rem;
+  height: 0.125rem;
   background-color: black;
   position: absolute;
   top: 1.25rem;
@@ -579,12 +564,13 @@ a:hover {
   }
 }
 
-.header_popup--open .header_accordion, .header_popup--open .header_copyRight {
+.header_popup--open .header_accordion,
+.header_popup--open .header_copyRight {
   opacity: 1;
   -webkit-transition: 0.8s all ease;
   transition: 0.8s all ease;
-  -webkit-transition-delay: .4s;
-          transition-delay: .4s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .header_menu {
@@ -628,73 +614,21 @@ a:hover {
   height: 30rem;
 }
 
-.accordion_list {
-  list-style: none;
-  width: 100%;
-}
-
-.accordion_header {
-  cursor: pointer;
-  padding: 2rem 0;
-}
-
-.accordion_header h6 {
-  display: inline-block;
-}
-
-.accordion_body {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transition: 0.2s all ease;
-  transition: 0.2s all ease;
-}
-
-.accordion_body--active {
-  max-height: unset;
-  opacity: 1;
-  padding: 1rem 0rem;
-  -webkit-transition: 0.2s all ease;
-  transition: 0.2s all ease;
-}
-
-.accordion_icon {
-  width: 3rem;
-  height: 3rem;
-  float: right;
-  position: relative;
-}
-
-.accordion_lineI {
-  height: 0.125rem;
-  width: 2.125rem;
-  background-color: black;
-  position: absolute;
-  top: 1.5rem;
-  left: 0.5rem;
-}
-
-.accordion_lineII {
-  height: 2.125rem;
-  width: 0.125rem;
-  background-color: black;
-  position: absolute;
-  left: 1.5rem;
-  top: 0.5rem;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
-}
-
-.accordion_lineII--open {
-  height: 0px !important;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
-}
-
 .index {
-  margin: 8.5rem 0;
+  margin: 21rem 0;
   display: inline-block;
   text-align: left;
+  width: 25rem;
+  position: fixed;
+  left: calc(((100% - 1440px) / 2) + 6rem);
+  z-index: 10;
+  top: 0;
+}
+
+@media only screen and (max-width: 1440px) {
+  .index {
+    left: 6rem;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -711,9 +645,12 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   .index {
-    display: none;
+    left: unset;
+    right: 3rem;
+    margin-top: 6.5rem;
+    margin-left: 0;
   }
 }
 
@@ -853,6 +790,69 @@ a.toc-link:hover {
 }
 
 /* table of content end*/
+.accordion_list {
+  list-style: none;
+  width: 100%;
+}
+
+.accordion_header {
+  cursor: pointer;
+  padding: 2rem 0;
+}
+
+.accordion_header h6 {
+  display: inline-block;
+}
+
+.accordion_body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.accordion_body--active {
+  max-height: unset;
+  opacity: 1;
+  padding: 1rem 0rem;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.accordion_icon {
+  width: 3rem;
+  height: 3rem;
+  float: right;
+  position: relative;
+}
+
+.accordion_lineI {
+  height: 0.125rem;
+  width: 2.125rem;
+  background-color: black;
+  position: absolute;
+  top: 1.5rem;
+  left: 0.5rem;
+}
+
+.accordion_lineII {
+  height: 2.125rem;
+  width: 0.125rem;
+  background-color: black;
+  position: absolute;
+  left: 1.5rem;
+  top: 0.5rem;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.accordion_lineII--open {
+  height: 0px !important;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
 .imgComparison img {
   display: block;
 }
@@ -963,49 +963,98 @@ h2 {
 }
 
 .toolBar {
-  width: calc(100% - 45rem);
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  top: 6rem;
+  left: calc(((100% - 1440px) / 2) + 6rem);
+  /*
   height: 7rem;
   position: fixed;
   top: 6rem;
-  right: 39rem;
+  right: unset;
   z-index: 10;
   text-align: right;
+  padding: 0px 0rem 0 44rem;
+  @include xxlScreen() {
+    width: 100%;
+  }
+  @include lScreen() {
+    width: calc(100% - 12rem);
+    right: 6rem;
+  }
+  @include mScreen() {
+    width: calc(100% - 6rem);
+    right: 3rem;
+    top: 3rem;
+  }
+  &_wrapper {
+    display: inline-block;
+  }
+  */
+  /*
+  &_searchBox {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    right: 39rem;
+  }
+  &_searchButton {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    right: 39rem;
+  }
+  */
 }
 
-@media only screen and (min-width: 1440px) {
-  .toolBar {
-    width: calc(1440px - 45rem);
-    right: calc(((100% - 1440px) / 2) + 39rem);
+.toolBar_wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 31rem 9rem 7rem auto;
+      grid-template-columns: 31rem 9rem 7rem auto;
+  grid-gap: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .toolBar_wrapper {
+    -ms-grid-columns: auto 9rem 3rem 3rem 25rem;
+        grid-template-columns: auto 9rem 3rem 3rem 25rem;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
   .toolBar {
     width: calc(100% - 12rem);
-    right: 6rem;
+    left: 6rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .toolBar {
     width: calc(100% - 6rem);
-    right: 3rem;
-    top: 3rem;
+    left: 3rem;
   }
 }
 
-.toolBar_wrapper {
-  display: inline-block;
-}
-
 .toolBar_translate {
-  margin: 2.5rem 0 0 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media only screen and (max-width: 1024px) {
   .toolBar_translate {
     float: left;
   }
+}
+
+.toolBar_logOut {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .toolBar_transtxt {
@@ -1063,19 +1112,11 @@ h2 {
   margin: 0.5rem 1.5rem 0.5rem 0.5rem;
 }
 
-.toolBar_searchBox {
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
-  position: fixed;
-  right: 39rem;
-}
-
-.toolBar_searchButton {
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
-  position: fixed;
-  right: 39rem;
+.toolBar_search {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: right;
+      justify-self: right;
 }
 /*# sourceMappingURL=style.css.map */

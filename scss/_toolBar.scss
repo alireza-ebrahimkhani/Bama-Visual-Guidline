@@ -1,39 +1,64 @@
 .toolBar {
-    width: calc(100% - 45rem);
-    height: 7rem;
-    position: fixed;
-    top: 6rem;
-    right: 39rem;
-    z-index: 10;
-    text-align: right;
-    @include xxlScreen(){
-      width: calc(1440px - 45rem);
-      right: calc(((100% - 1440px) / 2) + 39rem);
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  top: 6rem;
+  left: calc(((100% - 1440px) / 2) + 6rem);
+
+  &_wrapper {
+    display: grid;
+    grid-template-columns: 31rem 9rem 7rem auto;
+    grid-gap: 2rem;
+    @include mScreen() {
+      grid-template-columns: auto 9rem 3rem 3rem 25rem;
+    }
   }
-    @include lScreen(){
-      width: calc(100% - 12rem);
-      right: 6rem;
+  @include xlScreen() {
+    width: calc(100% - 12rem);
+    left: 6rem;
   }
-  @include mScreen(){
+  @include mScreen() {
     width: calc(100% - 6rem);
-      right: 3rem;
-      top: 3rem;
+    left: 3rem;
   }
-  &_wrapper{
+  /*
+  height: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: unset;
+  z-index: 10;
+  text-align: right;
+  padding: 0px 0rem 0 44rem;
+  @include xxlScreen() {
+    width: 100%;
+  }
+  @include lScreen() {
+    width: calc(100% - 12rem);
+    right: 6rem;
+  }
+  @include mScreen() {
+    width: calc(100% - 6rem);
+    right: 3rem;
+    top: 3rem;
+  }
+  &_wrapper {
     display: inline-block;
   }
+  */
   &_translate {
-    margin: 2.5rem 0 0 0;
-    @include lScreen(){
+    align-self: center;
+    @include lScreen() {
       float: left;
     }
+  }
+  &_logOut {
+    align-self: center;
   }
   &_transtxt {
     display: inline-block;
     line-height: 2rem;
     position: relative;
     top: -1px;
-  
   }
   &_transSwitch {
     background-color: white;
@@ -45,15 +70,15 @@
     margin-right: 0.5rem;
     border-radius: 1rem;
     transition: $fastMotion;
-    &:hover{
+    &:hover {
       background-color: rgba(255, 255, 255, 0.5);
       transition: $fastMotion;
     }
     &--active {
       transition: $fastMotion;
       background-color: $green;
-      &:hover{
-        background-color: lighten($green,10% );
+      &:hover {
+        background-color: lighten($green, 10%);
         transition: $fastMotion;
       }
     }
@@ -71,6 +96,7 @@
       margin: 0.5rem 1.5rem 0.5rem 0.5rem;
     }
   }
+  /*
   &_searchBox {
     width: 2rem;
     height: 2rem;
@@ -84,5 +110,10 @@
     background-color: white;
     position: fixed;
     right: 39rem;
+  }
+  */
+  &_search {
+    align-self: center;
+    justify-self: right;
   }
 }

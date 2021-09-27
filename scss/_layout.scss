@@ -1,95 +1,80 @@
-main{
-    width: 100%;
+main {
+  width: 100%;
 }
-article{
-    width: 100%;
-    padding-top: 23rem;
+article {
+  width: 100%;
+  padding-top: 18rem;
 }
-aside{
-    width: 31rem;
-    position: fixed;
-    right:0;
-    z-index: 10;
-    top: 0;
-    height: 100vh;
-    @include xxlScreen(){
-        right: calc(((100% - 1440px) / 2));
-    }
-    @include lScreen(){
-        display: none;
-    }
+.index {
 }
-.sSpace{
-    margin-bottom: 1rem !important;
+.sSpace {
+  margin-bottom: 1rem !important;
 }
-.mSpace{
-    margin-bottom: 3rem !important;
+.mSpace {
+  margin-bottom: 3rem !important;
 }
-.lSpace{
-    margin-bottom: 8rem !important;
+.lSpace {
+  margin-bottom: 8rem !important;
 }
 
-.full-bleed{
-
+.full-bleed {
 }
-.boxed{
-    max-width: 1440px;
-    padding: 0 39rem 0  6rem;
-    margin: 0 auto;
-    @include lScreen(){
-        padding: 0 6rem;
-    }
-    @include mScreen(){
-        padding: 0 3rem;
-    }
+.boxed {
+  max-width: 1440px;
+  padding: 0 0rem 0 39rem;
+  margin: 0 auto;
+  @include lScreen() {
+    padding: 0 6rem;
+  }
+  @include mScreen() {
+    padding: 0 3rem;
+  }
 }
-.row{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-gap:3rem;
-    margin-bottom: 3rem;
-    @include mScreen(){
-        grid-template-columns: repeat(8,1fr);
-    }
-    @include sScreen(){
-        grid-template-columns: repeat(4,1fr);
-    }
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 3rem;
+  @include mScreen() {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @include sScreen() {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-.col-full{
-    grid-column: span 12;
-    @include mScreen(){
-        grid-column: span 8;
-    }
-    @include sScreen(){
-        grid-column: span 4;
-    }
-}
-.col-half{
-    grid-column: span 6;
-    @include mScreen(){
-        grid-column: span 4;
-    }
-    @include sScreen(){
-        grid-column: span 4;
-    }
-}
-.col-third{
+.col-full {
+  grid-column: span 12;
+  @include mScreen() {
+    grid-column: span 8;
+  }
+  @include sScreen() {
     grid-column: span 4;
-    @include mScreen(){
-        grid-column: span 4;
-    }
-    @include sScreen(){
-        grid-column: span 4;
-    }
+  }
 }
-.col-quarter{
-    grid-column: span 3;
-    @include mScreen(){
-        grid-column: span 4;
-    }
-    @include sScreen(){
-        grid-column: span 4;
-    }
+.col-half {
+  grid-column: span 6;
+  @include mScreen() {
+    grid-column: span 4;
+  }
+  @include sScreen() {
+    grid-column: span 4;
+  }
 }
-
-
+.col-third {
+  grid-column: span 4;
+  @include mScreen() {
+    grid-column: span 4;
+  }
+  @include sScreen() {
+    grid-column: span 4;
+  }
+}
+.col-quarter {
+  grid-column: span 3;
+  @include mScreen() {
+    grid-column: span 4;
+  }
+  @include sScreen() {
+    grid-column: span 4;
+  }
+}
