@@ -671,6 +671,7 @@ a:hover {
     overflow: hidden;
     background-color: #ffffff5b;
     border-radius: 3rem;
+    -webkit-backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
   }
