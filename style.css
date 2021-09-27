@@ -508,6 +508,7 @@ a:hover {
   border-radius: 6rem;
   transition: 0.5s all ease;
   overflow: hidden;
+  -moz-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 
@@ -669,8 +670,8 @@ a:hover {
     overflow: hidden;
     background-color: #ffffff5b;
     border-radius: 3rem;
-    -webkit-backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
   }
 }
 

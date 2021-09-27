@@ -143,6 +143,8 @@
         border-radius: 6rem;
         transition: $mediumMotion;
         overflow: hidden;
+        -webkit-backdrop-filter: blur(20px);
+        -moz-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         @include xxlScreen(){
             left: calc(((100% - 1440px) / 2) + 6rem);

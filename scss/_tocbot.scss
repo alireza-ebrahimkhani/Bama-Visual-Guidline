@@ -11,6 +11,7 @@
     border-radius: 3rem;
     -webkit-backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
   }
   @include sScreen(){
     display: none;
