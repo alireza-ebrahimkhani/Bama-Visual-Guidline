@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bama Visual Guidline</title>
     <link rel="stylesheet" href="style.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.5/lottie.min.js" integrity="sha256-tVpznqqKrEwxQ4kPHZW4HR+i/MRmuGHEozkBXm1DMSs=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script src="js/tocbot.min.js" type="text/javascript"></script>
 </head>
@@ -15,33 +16,34 @@
   <div class="body_wrapper">
     <div class="toolBar">
       <div class="toolBar_wrapper">
-        <div class="toolBar_logo">
-          <svg class="toolBar_logoSvg" x="0px" y="0px"
-              viewBox="0 0 69 64" style="enable-background:new 0 0 69 64;" xml:space="preserve">
-          <g>
-              <g>
-                  <rect x="54" y="25" width="15" height="15"/>
-                  <rect x="0" y="4" width="15" height="36"/>
-                  <rect x="36" y="4" width="15" height="36"/>
-                  <circle cx="25.5" cy="32.5" r="7.5"/>
-                  <circle cx="61.5" cy="50.5" r="7.5"/>
-              </g>
-          </g>
-          </svg>
-        </div>
-        <div class="toolBar_translate">
-          <div class="toolBar_transSwitch" onclick="toggleSwitch()">
-            <div class="toolBar_transPin"></div>
+        <div class="toolBar_tools">
+          <div class="toolBar_translate">
+            <div class="toolBar_translateWrapper">
+              <div class="toolBar_transSwitch" onclick="toggleSwitch()">
+                <div class="toolBar_transPin"></div>
+              </div>
+              <spam class="toolBar_transtxt subtitle1">Farsi</spam>
+            </div>
           </div>
-          <spam class="toolBar_transtxt subtitle1">Farsi</spam>
+          <div class="toolBar_logout">
+            <a href="#"><img src="platform/icons/logout.svg"><span>Logout</span></a>
+          </div>
+          <div class="toolBar_search">
+            <a href="#"><img src="platform/icons/search.svg"><span>Search</span></a>
+          </div>
         </div>
-        <div class="toolBar_logOut">
-          <a href="#" class="toolBar_logOutLink">Logout</a>
+        <div class="toolBar_logo">
+          <svg class="toolBar_logoSvg"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 46 36" style="enable-background:new 0 0 46 36;" xml:space="preserve">
+           <g>
+             <rect x="36" y="14" width="10" height="10"/>
+             <rect y="0" width="10" height="24"/>
+             <rect x="24" y="0" width="10" height="24"/>
+             <circle cx="17" cy="19" r="5"/>
+             <circle cx="41" cy="31" r="5"/>
+           </g>
+           </svg>
         </div>
-        <div class="toolBar_search">
-          <a href="#" class="toolBar_searchBtn">Search</a>
-        </div>
-        
       </div>
     </div>
     <nav class="index">
@@ -71,11 +73,12 @@
                     </div>
                     <div class="accordion_body">
                       <ul class="header_items">
-                        <li class="header_item"><a href=#>logo</a></li>
-                        <li class="header_item"><a href=#>color</a></li>
-                        <li class="header_item"><a href=#>brand architecture</a></li>
-                        <li class="header_item"><a href=#>staitionary</a></li>
-                        <li class="header_item"><a href=#>presentatio</a></li>
+                        <li class="header_item"><a href="#">logo</a></li>
+                        <li class="header_item"><a href="#">color</a></li>
+                        <li class="header_item"><a href="typography/index.html">typography</a></li>
+                        <li class="header_item"><a href="#">brand architecture</a></li>
+                        <li class="header_item"><a href="#">staitionary</a></li>
+                        <li class="header_item"><a href="#">presentatio</a></li>
                       </ul>
                     </div>
                   </li>
@@ -114,7 +117,6 @@
           <div class="header_hamIco">
               <div class="header_line"></div>
           </div>
-          
       </div>
     </header>
     <main class="main">
@@ -350,16 +352,7 @@
           <div class="row">
             <div class="col-half">
               <div class="">
-                <div id="mediaIcon" class="lottie"></div>
-                <script>
-                  var anim_mediaIcon = bodymovin.loadAnimation({
-                    container: document.getElementById('mediaIcon'), 
-                    path: 'asset/logo/mediaIcon.json', 
-                    renderer: 'svg',
-                    loop: true, 
-                    autoplay: true,
-                  })
-                </script>
+                <lottie-player autoplay loop mode="normal" src="asset/logo/mediaIcon.json"style="width: 100%"></lottie-player>
               </div>
             </div>
             <div class="col-half">

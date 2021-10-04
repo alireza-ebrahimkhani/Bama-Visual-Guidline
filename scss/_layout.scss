@@ -3,9 +3,7 @@ main {
 }
 article {
   width: 100%;
-  padding-top: 19.5rem;
-}
-.index {
+  padding-top: 15.5rem;
 }
 .sSpace {
   margin-bottom: 1rem !important;
@@ -16,8 +14,8 @@ article {
 .lSpace {
   margin-bottom: 8rem !important;
 }
-
-.full-bleed {
+.xlSpace {
+  margin-bottom: 20rem !important;
 }
 .boxed {
   max-width: 1440px;
@@ -28,6 +26,9 @@ article {
   }
   @include mScreen() {
     padding: 0 3rem;
+  }
+  @include sScreen() {
+    padding: 0 2rem;
   }
 }
 .row {

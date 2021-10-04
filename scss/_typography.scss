@@ -96,13 +96,26 @@ $fafont: "Peyda";
 
 h1,
 .h1 {
-  @include type(400, 15rem, -1.5, 1, uppercase);
+  @include type(400, 12rem, -1.5, 1, uppercase);
   @extend %enType;
+  word-break: break-word;
 }
 h2,
 .h2 {
   @include type(300, 7.5rem, -0.5, 1, capitalize);
   @extend %enType;
+  word-break: break-word;
+  &::before{
+    content: " ";
+    height: 16rem;
+    display: block;
+    margin-top: -16rem;
+    visibility: hidden;
+    @include mScreen{
+        height: 15rem;
+        margin-top: -15rem;
+    }
+}
 }
 h3,
 .h3 {
@@ -169,4 +182,7 @@ a {
   &--show {
     display: block;
   }
+}
+.body1.fa{
+  font-size: 1.9rem;
 }

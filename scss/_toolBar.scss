@@ -1,60 +1,123 @@
 .toolBar {
-  width: calc(1440px - 12rem);
+  width: 100%;
   max-width: 1440px;
   position: fixed;
-  top: 6rem;
-  left: calc(((100% - 1440px) / 2) + 6rem);
-  z-index: 10;
+  padding: 0 6rem;
+  height: 15rem;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
   @include xlScreen() {
-    width: calc(100% - 12rem);
-    left: 6rem;
   }
   @include mScreen() {
-    width: calc(100% - 6rem);
-    left: 3rem;
+    padding: 0 3rem;
+  }
+  @include sScreen() {
+    height: auto;
+    background-color:  #ffffff5b;
+    backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
   &_wrapper {
+    padding: 3.5rem 0;
     display: grid;
-    grid-template-columns: 31rem 9rem 7rem auto;
-    grid-gap: 2rem;
+    grid-template-columns: auto 9.5rem;
+    grid-column-gap: 2rem;
     @include lScreen() {
-      grid-template-columns: auto 9rem 7rem 7rem 25rem;
+      grid-template-columns: 9.5rem 1fr 25rem; 
+      margin-left: unset;
     }
-    @include mScreen() {
-      grid-template-columns: auto 9rem 3rem 3rem 25rem;
+    @include sScreen() {
+      grid-template-columns: 9.5rem 1fr; 
+      padding: 0;
+    }
+    
+  }
+  &_tools{
+    padding: 2rem 0;
+    @include lScreen() {
+    justify-self: right;
+    }
+    & > div{
+      float: left;
+      margin-right: 2rem;
+      @include sScreen() {
+        margin-left: 2rem;
+        margin-right: 0;
+      }
+    }
+  }
+  &_logout{
+    & img{
+      width: 3rem;
+      display: none;
+      @include mScreen{
+        display: block;
+      }
+    }
+    & span{
+      display: block;
+      line-height: 3rem;
+      @include mScreen{
+        display: none;
+      }
+    }
+  }
+  &_search{
+    display: none;
+    & img{
+      width: 3rem;
+      display: none;
+      @include mScreen{
+        display: block;
+      }
+    }
+    & span{
+      display: block;
+      line-height: 3rem;
+      @include mScreen{
+        display: none;
+      }
     }
   }
   &_logo {
     position: relative;
     z-index: 1000;
-  }
-  &_logoSvg {
-    height: 7rem;
-  }
-  &_translate {
-    align-self: center;
+    height: 4.5rem;
+    padding: 2rem 0 0.5rem;
+    justify-self: right;
     @include lScreen() {
-      float: left;
+      justify-self: left;
+      grid-column: 1/2;
+      grid-row: 1;
     }
   }
-  &_logOut {
-    align-self: center;
+  &_logoSvg {
+    height: 4.5rem;
+  }
+  &_translate {
+    position: relative;
+    margin-right: 24rem !important;
+    @include lScreen() {
+      float: left;
+      margin-right: 2rem !important;
+    }
   }
   &_transtxt {
     display: inline-block;
-    line-height: 2rem;
-    position: relative;
-    top: -1px;
+    line-height: 3rem;
   }
   &_transSwitch {
-    background-color: white;
+    background-color: $lightgrey;
     width: 3.5rem;
     height: 2rem;
     display: inline-block;
-    right: 50rem;
     cursor: pointer;
     margin-right: 0.5rem;
     border-radius: 1rem;
+    position: relative;
+    top: .25rem;
     transition: $fastMotion;
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
@@ -62,9 +125,9 @@
     }
     &--active {
       transition: $fastMotion;
-      background-color: $green;
+      background-color: $mainColor;
       &:hover {
-        background-color: lighten($green, 10%);
+        background-color: lighten($mainColor, 10%);
         transition: $fastMotion;
       }
     }

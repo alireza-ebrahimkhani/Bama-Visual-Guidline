@@ -50,7 +50,7 @@
   transition: .3s all ease;
 }
 .imgComparison__silder::-webkit-slider-thumb:hover {
-  background: $green; 
+  background: $mainColor; 
   transition: .3s all ease;
 }
 .imgComparison__silder::-moz-range-thumb {
@@ -58,7 +58,7 @@
   -webkit-appearance: none; 
   width: 16px; 
   height: 8px; 
-  border: 1px solid $green;
+  border: 1px solid $mainColor;
   background: white; 
   cursor: pointer; 
 }

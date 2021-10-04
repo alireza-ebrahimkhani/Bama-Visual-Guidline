@@ -25,3 +25,38 @@ h1{
 h2{
     margin-left: -0.5rem;
 }
+.hoverImg{
+    & > .hoverImg_hide{
+        opacity: 1;
+    transition: $fastMotion;
+    }
+    &:hover > .hoverImg_hide{
+        opacity: 0;
+    transition: $fastMotion;
+    }
+    & .hoverImg_reveal{
+        z-index: -4;
+    }
+} 
+.smallest{
+    position: relative;
+    & > img{
+        position: absolute;
+        left: 50%;
+        top: 50% !important;
+        transform: translate(-50% , -50%);
+        z-index: 1  !important;
+    }
+}
+.logoMotion{
+    position: fixed;
+    bottom: 6rem;
+    width: 18rem;
+    left: 5rem;
+    @include xxlScreen{
+        left: calc(((100% - 1440px) / 2) + 5rem);
+    }
+    @include lScreen{
+        display: none;
+    }
+}
