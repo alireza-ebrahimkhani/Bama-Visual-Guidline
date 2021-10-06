@@ -394,6 +394,7 @@ a:hover {
   bottom: 6rem;
   left: 6rem;
   border-radius: 4rem;
+  z-index: 200;
   transition: 0.5s all ease;
   cursor: pointer;
 }
@@ -525,6 +526,7 @@ a:hover {
   left: 6rem;
   transform-origin: bottom center;
   border-radius: 6rem;
+  z-index: -1;
   transition: 0.5s all ease;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -551,6 +553,7 @@ a:hover {
   bottom: 3rem;
   left: 3rem;
   border-radius: 0rem;
+  z-index: 100;
   transition: 0.5s all ease;
 }
 

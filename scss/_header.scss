@@ -16,6 +16,7 @@
     bottom: 6rem;
     left: 6rem;
     border-radius: 4rem;
+    z-index: 200;
     transition: $mediumMotion;
     cursor: pointer;
     @include xxlScreen() {
@@ -129,6 +130,7 @@
     left: 6rem;
     transform-origin: bottom center;
     border-radius: 6rem;
+    z-index: -1;
     transition: $mediumMotion;
     overflow: hidden;
     backdrop-filter: blur(20px);
@@ -149,6 +151,7 @@
     bottom: 3rem;
     left: 3rem;
     border-radius: 0rem;
+    z-index: 100;
     transition: $mediumMotion;
     @include xxlScreen() {
       left: calc(((100% - 1440px) / 2) + 3rem);
