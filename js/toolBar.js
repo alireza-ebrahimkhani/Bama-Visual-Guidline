@@ -19,15 +19,7 @@ toc_item.forEach(thisToc_item => {
     index_is_open = false;
   });
 });
-$(window).on('scroll', _.throttle( closeIndex, 1000, {trailing: false}));  
-function closeIndex(){
-  
-  if (index_is_open = true){
-    index_nav.classList.remove("index_nav--open");
-    index_dynamicTitle.classList.remove("index_dynamicTitle--open");
-    index_is_open = false;
-  }
-}
+
 $(window).on('scroll', _.throttle( changeTitle, 1000, {trailing: false}));  
 function changeTitle(){
   let active_link = document.querySelector(".is-active-link");
