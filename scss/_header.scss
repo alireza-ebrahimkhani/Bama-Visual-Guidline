@@ -131,6 +131,7 @@
     transform-origin: bottom center;
     border-radius: 6rem;
     z-index: -1;
+    visibility: hidden;
     transition: $mediumMotion;
     overflow: hidden;
     backdrop-filter: blur(20px);
@@ -152,6 +153,7 @@
     left: 3rem;
     border-radius: 0rem;
     z-index: 100;
+    visibility: visible;
     transition: $mediumMotion;
     @include xxlScreen() {
       left: calc(((100% - 1440px) / 2) + 3rem);

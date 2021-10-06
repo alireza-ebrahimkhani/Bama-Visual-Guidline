@@ -527,6 +527,7 @@ a:hover {
   transform-origin: bottom center;
   border-radius: 6rem;
   z-index: -1;
+  visibility: hidden;
   transition: 0.5s all ease;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -554,6 +555,7 @@ a:hover {
   left: 3rem;
   border-radius: 0rem;
   z-index: 100;
+  visibility: visible;
   transition: 0.5s all ease;
 }
 
