@@ -394,7 +394,6 @@ a:hover {
   bottom: 6rem;
   left: 6rem;
   border-radius: 4rem;
-  z-index: 200;
   transition: 0.5s all ease;
   cursor: pointer;
 }
@@ -487,7 +486,6 @@ a:hover {
   text-align: right;
   bottom: 6rem;
   padding-right: 4rem;
-  visibility: hidden;
   opacity: 0;
   transition: 0.2s all ease;
 }
@@ -512,7 +510,6 @@ a:hover {
 
 .header_accordion {
   width: 100%;
-  visibility: hidden;
   opacity: 0;
   transition: 0.2s all ease;
 }
@@ -524,9 +521,10 @@ a:hover {
   position: fixed;
   bottom: 6rem;
   left: 6rem;
+  opacity: 0;
+  visibility: hidden;
   transform-origin: bottom center;
   border-radius: 6rem;
-  z-index: -1;
   transition: 0.5s all ease;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -552,8 +550,9 @@ a:hover {
   height: calc(100vh - 6rem);
   bottom: 3rem;
   left: 3rem;
+  visibility: visible;
+  opacity: 1;
   border-radius: 0rem;
-  z-index: 100;
   transition: 0.5s all ease;
 }
 
@@ -581,7 +580,6 @@ a:hover {
 .header_popup--open .header_accordion,
 .header_popup--open .header_copyRight {
   opacity: 1;
-  visibility: visible;
   transition: 0.8s all ease;
   transition-delay: 0.4s;
 }
