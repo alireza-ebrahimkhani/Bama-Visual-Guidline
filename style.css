@@ -510,6 +510,7 @@ a:hover {
 
 .header_accordion {
   width: 100%;
+  display: none;
   opacity: 0;
   transition: 0.2s all ease;
 }
@@ -579,6 +580,7 @@ a:hover {
 
 .header_popup--open .header_accordion,
 .header_popup--open .header_copyRight {
+  display: block;
   opacity: 1;
   transition: 0.8s all ease;
   transition-delay: 0.4s;

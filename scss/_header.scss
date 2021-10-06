@@ -115,6 +115,7 @@
   }
   &_accordion {
     width: 100%;
+    display: none;
     opacity: 0;
     transition: $fastMotion;
   }
@@ -166,6 +167,7 @@
     }
     & .header_accordion,
     & .header_copyRight {
+      display: block;
       opacity: 1;
       transition: $slowMotion;
       transition-delay: 0.4s;
