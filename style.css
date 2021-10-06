@@ -393,6 +393,10 @@ a:hover {
   position: fixed;
   bottom: 6rem;
   left: 6rem;
+  background-color: #8fe0448e;
+  backdrop-filter: blur(20px);
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 4rem;
   transition: 0.5s all ease;
   cursor: pointer;
@@ -486,8 +490,6 @@ a:hover {
   text-align: right;
   bottom: 6rem;
   padding-right: 4rem;
-  visibility: hidden;
-  opacity: 0;
   transition: 0.2s all ease;
 }
 
@@ -511,20 +513,19 @@ a:hover {
 
 .header_accordion {
   width: 100%;
-  visibility: hidden;
-  opacity: 0;
   transition: 0.2s all ease;
 }
 
 .header_popup {
-  width: 8rem;
-  height: 8rem;
+  width: 60rem;
+  height: calc(100vh - 6rem);
   background-color: #8fe0448e;
   position: fixed;
-  bottom: 6rem;
-  left: 6rem;
+  bottom: 3rem;
+  left: 3rem;
+  visibility: hidden;
+  opacity: 0;
   transform-origin: bottom center;
-  border-radius: 6rem;
   transition: 0.5s all ease;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -540,34 +541,6 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .header_popup {
-    bottom: 3rem;
-    left: 3rem;
-  }
-}
-
-.header_popup--open {
-  width: 60rem;
-  height: calc(100vh - 6rem);
-  bottom: 3rem;
-  left: 3rem;
-  border-radius: 0rem;
-  transition: 0.5s all ease;
-}
-
-@media only screen and (min-width: 1440px) {
-  .header_popup--open {
-    left: calc(((100% - 1440px) / 2) + 3rem);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .header_popup--open {
-    width: calc(100% - 6rem);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .header_popup--open {
     width: 100%;
     height: 100vh;
     bottom: 0rem;
@@ -575,12 +548,17 @@ a:hover {
   }
 }
 
-.header_popup--open .header_accordion,
-.header_popup--open .header_copyRight {
+.header_popup--open {
+  border-radius: 0rem;
   visibility: visible;
   opacity: 1;
-  transition: 0.8s all ease;
-  transition-delay: 0.4s;
+  transition: 0.5s all ease;
+}
+
+@media only screen and (min-width: 1440px) {
+  .header_popup--open {
+    left: calc(((100% - 1440px) / 2) + 3rem);
+  }
 }
 
 .header_menu {
