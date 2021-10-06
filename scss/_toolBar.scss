@@ -4,6 +4,172 @@
   position: fixed;
   padding: 0 6rem;
   height: 15rem;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  @include xlScreen() {
+  }
+  @include mScreen() {
+    padding: 0 3rem;
+  }
+  @include sScreen() {
+    height: auto;
+    padding: 0 2rem;
+    background-color: white;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+  }
+  &_wrapper {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: auto 9.5rem;
+    grid-gap: 2rem;
+    margin-left: 33rem;
+    @include lScreen() {
+      grid-template-columns: 9.5rem 1fr 25rem; 
+      margin-left: unset;
+    }
+    @include sScreen() {
+      grid-template-columns: 9.5rem 1fr; 
+      padding: 1rem 0;
+    }
+    
+  }
+  &_tools{
+    padding: 1rem 0;
+    @include lScreen() {
+    justify-self: right;
+    }
+    & > div{
+      float: left;
+      margin-right: 2rem;
+      @include sScreen() {
+        margin-left: 2rem;
+        margin-right: 0;
+      }
+    }
+  }
+  &_logout{
+    display: none;
+    & img{
+      width: 3rem;
+      display: none;
+      @include mScreen{
+        display: block;
+      }
+    }
+    & span{
+      display: block;
+      line-height: 3rem;
+      @include mScreen{
+        display: none;
+      }
+    }
+  }
+  &_search{
+    display: none;
+    & img{
+      width: 3rem;
+      display: none;
+      @include mScreen{
+        display: block;
+      }
+    }
+    & span{
+      display: block;
+      line-height: 3rem;
+      @include mScreen{
+        display: none;
+      }
+    }
+  }
+  &_logo {
+    position: relative;
+    z-index: 1000;
+    height: 5rem;
+    justify-self: right;
+    @include lScreen() {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+  }
+  &_logoSvg {
+    height: 5rem;
+  }
+  &_translate {
+    position: relative;
+    @include lScreen() {
+      float: left;
+    }
+  }
+  &_transtxt {
+    display: inline-block;
+    line-height: 3rem;
+  }
+  &_transSwitch {
+    background-color: $lightgrey;
+    width: 3.5rem;
+    height: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    position: relative;
+    top: .25rem;
+    transition: $fastMotion;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: $fastMotion;
+    }
+    &--active {
+      transition: $fastMotion;
+      background-color: $mainColor;
+      &:hover {
+        background-color: lighten($mainColor, 10%);
+        transition: $fastMotion;
+      }
+    }
+  }
+  &_transPin {
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    margin: 0.5rem 0.5rem 0.5rem 2rem;
+    transition: $fastMotion;
+    border-radius: 50%;
+    &--active {
+      transition: $fastMotion;
+      background-color: black;
+      margin: 0.5rem 1.5rem 0.5rem 0.5rem;
+    }
+  }
+  /*
+  &_searchBox {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    right: 39rem;
+  }
+  &_searchButton {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    right: 39rem;
+  }
+  */
+  &_search {
+    align-self: center;
+    justify-self: right;
+  }
+}
+
+/*.toolBar {
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  padding: 0 6rem;
+  height: 15rem;
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
