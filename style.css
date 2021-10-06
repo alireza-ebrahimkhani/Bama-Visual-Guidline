@@ -486,6 +486,7 @@ a:hover {
   text-align: right;
   bottom: 6rem;
   padding-right: 4rem;
+  visibility: hidden;
   opacity: 0;
   transition: 0.2s all ease;
 }
@@ -510,6 +511,7 @@ a:hover {
 
 .header_accordion {
   width: 100%;
+  visibility: hidden;
   opacity: 0;
   transition: 0.2s all ease;
 }
@@ -576,6 +578,7 @@ a:hover {
 .header_popup--open .header_accordion,
 .header_popup--open .header_copyRight {
   opacity: 1;
+  visibility: visible;
   transition: 0.8s all ease;
   transition-delay: 0.4s;
 }

@@ -99,6 +99,7 @@
     text-align: right;
     bottom: 6rem;
     padding-right: 4rem;
+    visibility: hidden;
     opacity: 0;
     transition: $fastMotion;
     & a {
@@ -115,6 +116,7 @@
   }
   &_accordion {
     width: 100%;
+    visibility: hidden;
     opacity: 0;
     transition: $fastMotion;
   }
@@ -163,6 +165,7 @@
     & .header_accordion,
     & .header_copyRight {
       opacity: 1;
+      visibility: visible;
       transition: $slowMotion;
       transition-delay: 0.4s;
     }
