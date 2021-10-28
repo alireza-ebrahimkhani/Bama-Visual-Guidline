@@ -15,7 +15,7 @@
     position: fixed;
     bottom: 6rem;
     left: 6rem;
-    background-color: #8fe0448e;
+    background: rgba($mainColor, 0.5);
     backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -123,7 +123,7 @@
   &_popup {
     width: 60rem;
     height: calc(100vh - 6rem);
-    background-color: #8fe0448e;
+    background: rgba($mainColor, 0.5);
     position: fixed;
     bottom: 3rem;
     left: 3rem;
@@ -136,7 +136,7 @@
     -moz-backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     @include xxlScreen() {
-      left: calc(((100% - 1440px) / 2) + 6rem);
+      left: calc(((100% - 1440px) / 2) + 3rem);
     }
     @include mScreen() {
       width: 100%;

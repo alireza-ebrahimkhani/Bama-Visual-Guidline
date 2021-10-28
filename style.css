@@ -393,7 +393,7 @@ a:hover {
   position: fixed;
   bottom: 6rem;
   left: 6rem;
-  background-color: #8fe0448e;
+  background: rgba(125, 224, 101, 0.5);
   backdrop-filter: blur(20px);
   -moz-backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -519,7 +519,7 @@ a:hover {
 .header_popup {
   width: 60rem;
   height: calc(100vh - 6rem);
-  background-color: #8fe0448e;
+  background: rgba(125, 224, 101, 0.5);
   position: fixed;
   bottom: 3rem;
   left: 3rem;
@@ -535,7 +535,7 @@ a:hover {
 
 @media only screen and (min-width: 1440px) {
   .header_popup {
-    left: calc(((100% - 1440px) / 2) + 6rem);
+    left: calc(((100% - 1440px) / 2) + 3rem);
   }
 }
 
@@ -981,7 +981,7 @@ a.toc-link:hover {
 }
 
 .imgComparison__silder::-webkit-slider-thumb:hover {
-  background: #8FE044;
+  background: #7DE065;
   transition: .3s all ease;
 }
 
@@ -990,7 +990,7 @@ a.toc-link:hover {
   -webkit-appearance: none;
   width: 16px;
   height: 8px;
-  border: 1px solid #8FE044;
+  border: 1px solid #7DE065;
   background: white;
   cursor: pointer;
 }
@@ -1072,6 +1072,61 @@ h2 {
   .logoMotion {
     display: none;
   }
+}
+
+.colorBox {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.5s all ease;
+  overflow: hidden;
+}
+
+.colorBox_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.colorBox_title {
+  margin-right: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.colorBox_dark P, .colorBox_dark span {
+  color: white;
+  width: 100%;
+}
+
+.colorBox_img {
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  z-index: 1;
+  transition: 0.5s all ease;
+}
+
+.colorBox_img:hover {
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+
+.colorBoxHover {
+  border-radius: 0;
+  transition: 0.5s all ease;
+}
+
+.colorBoxHover:hover {
+  border-radius: 50%;
+  transition: 0.5s all ease;
+}
+
+.colorProportion div {
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
 .toolBar {
@@ -1265,11 +1320,11 @@ h2 {
 
 .toolBar_transSwitch--active {
   transition: 0.2s all ease;
-  background-color: #8FE044;
+  background-color: #7DE065;
 }
 
 .toolBar_transSwitch--active:hover {
-  background-color: #a9e770;
+  background-color: #a1e98f;
   transition: 0.2s all ease;
 }
 
