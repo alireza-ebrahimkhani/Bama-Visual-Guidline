@@ -110,4 +110,103 @@ h2{
         text-align: center;
     }
 }
-
+.calculator{
+    background-color: white;
+    &_figure{
+        & img{
+            z-index: 1;
+        }
+    }
+    &_horizontal , &_vertical{
+        display: none;
+    }
+    & label{
+        display: block;
+    }
+    &_field{
+        width: calc(50% - 1.25rem);
+        display: inline-block;
+    }
+    & form{
+        padding: 3rem;
+    }
+    & input[type=text]{
+        width: 100%;
+        appearance: none;
+        border: 0;
+        border-bottom: 1px solid grey;
+        height: 4rem;
+        padding: 1rem 0;
+        background: none;
+        line-height: 0;
+        font-size: 2rem;
+        transition: $fastMotion;
+        &:focus{
+            outline: none;
+            border-bottom: 1px solid black;
+            transition: $fastMotion;
+        }
+    }
+    & span{
+        float: right;
+    }
+    &_submit{
+        margin-top: 3rem;
+        appearance: none;
+        border:0;
+        width: 100%;
+        height: 5rem;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transition: $fastMotion;
+        &:hover{
+            background-color: grey;
+            transition: $fastMotion;
+        }
+    }
+    &_items{
+        background-color: black;
+        padding: 3rem;
+        & p{
+            color: white;
+            padding: 1rem 0;
+        }
+        & h5{
+            color: white;
+            margin-bottom: 2rem;
+        }
+        & p:not(:last-child){
+            border-bottom: 1px solid rgb(48, 48, 48);
+        }
+    }
+    &_image{
+        background-color: $mainColor;
+        position: relative;
+        & > .calculator_figure{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            @include sScreen(){
+                position: relative;
+            }
+        }
+    }
+    &_info{
+        position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 3rem;
+    }
+}
+ul{
+    list-style: none;
+}
+.bullet{
+    list-style: disc;
+    & li{
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+    }
+}

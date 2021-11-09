@@ -102,7 +102,7 @@ h1,
 }
 h2,
 .h2 {
-  @include type(300, 7.5rem, -0.5, 1, capitalize);
+  @include type(500, 7.5rem, -0.5, 1, capitalize);
   @extend %enType;
   word-break: break-word;
   &::before{

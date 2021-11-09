@@ -36,7 +36,7 @@ article {
 }
 
 .mSpace {
-  margin-bottom: 3rem !important;
+  margin-bottom: 6rem !important;
 }
 
 .lSpace {
@@ -76,6 +76,11 @@ article {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 3rem;
   margin-bottom: 3rem;
+}
+
+.row--caption {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -151,6 +156,22 @@ article {
 @media only screen and (max-width: 600px) {
   .col-quarter {
     grid-column: span 4;
+  }
+}
+
+.col-sixth {
+  grid-column: span 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-sixth {
+    grid-column: span 2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .col-sixth {
+    grid-column: span 2;
   }
 }
 
@@ -231,7 +252,7 @@ h1,
 
 h2,
 .h2 {
-  font-weight: 300;
+  font-weight: 500;
   font-size: 7.5rem;
   letter-spacing: -0.5;
   line-height: 1;
@@ -393,7 +414,7 @@ a:hover {
   position: fixed;
   bottom: 6rem;
   left: 6rem;
-  background: rgba(125, 224, 101, 0.5);
+  background: rgba(121, 228, 94, 0.5);
   backdrop-filter: blur(20px);
   -moz-backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -519,7 +540,7 @@ a:hover {
 .header_popup {
   width: 60rem;
   height: calc(100vh - 6rem);
-  background: rgba(125, 224, 101, 0.5);
+  background: rgba(121, 228, 94, 0.5);
   position: fixed;
   bottom: 3rem;
   left: 3rem;
@@ -981,7 +1002,7 @@ a.toc-link:hover {
 }
 
 .imgComparison__silder::-webkit-slider-thumb:hover {
-  background: #7DE065;
+  background: #79E45E;
   transition: .3s all ease;
 }
 
@@ -990,7 +1011,7 @@ a.toc-link:hover {
   -webkit-appearance: none;
   width: 16px;
   height: 8px;
-  border: 1px solid #7DE065;
+  border: 1px solid #79E45E;
   background: white;
   cursor: pointer;
 }
@@ -1127,6 +1148,128 @@ h2 {
 .colorProportion div {
   padding: 6rem 2rem;
   text-align: center;
+}
+
+.calculator {
+  background-color: white;
+}
+
+.calculator_figure img {
+  z-index: 1;
+}
+
+.calculator_horizontal, .calculator_vertical {
+  display: none;
+}
+
+.calculator label {
+  display: block;
+}
+
+.calculator_field {
+  width: calc(50% - 1.25rem);
+  display: inline-block;
+}
+
+.calculator form {
+  padding: 3rem;
+}
+
+.calculator input[type=text] {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  border-bottom: 1px solid grey;
+  height: 4rem;
+  padding: 1rem 0;
+  background: none;
+  line-height: 0;
+  font-size: 2rem;
+  transition: 0.2s all ease;
+}
+
+.calculator input[type=text]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  transition: 0.2s all ease;
+}
+
+.calculator span {
+  float: right;
+}
+
+.calculator_submit {
+  margin-top: 3rem;
+  appearance: none;
+  border: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.calculator_submit:hover {
+  background-color: grey;
+  transition: 0.2s all ease;
+}
+
+.calculator_items {
+  background-color: black;
+  padding: 3rem;
+}
+
+.calculator_items p {
+  color: white;
+  padding: 1rem 0;
+}
+
+.calculator_items h5 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.calculator_items p:not(:last-child) {
+  border-bottom: 1px solid #303030;
+}
+
+.calculator_image {
+  background-color: #79E45E;
+  position: relative;
+}
+
+.calculator_image > .calculator_figure {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .calculator_image > .calculator_figure {
+    position: relative;
+  }
+}
+
+.calculator_info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.bullet {
+  list-style: disc;
+}
+
+.bullet li {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 
 .toolBar {
@@ -1320,11 +1463,11 @@ h2 {
 
 .toolBar_transSwitch--active {
   transition: 0.2s all ease;
-  background-color: #7DE065;
+  background-color: #79E45E;
 }
 
 .toolBar_transSwitch--active:hover {
-  background-color: #a1e98f;
+  background-color: #9deb8a;
   transition: 0.2s all ease;
 }
 

@@ -9,7 +9,7 @@ article {
   margin-bottom: 1rem !important;
 }
 .mSpace {
-  margin-bottom: 3rem !important;
+  margin-bottom: 6rem !important;
 }
 .lSpace {
   margin-bottom: 16rem !important;
@@ -36,6 +36,10 @@ article {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 3rem;
   margin-bottom: 3rem;
+  &--caption{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0rem;
+  }
   @include mScreen() {
     grid-template-columns: repeat(8, 1fr);
   }
@@ -77,5 +81,14 @@ article {
   }
   @include sScreen() {
     grid-column: span 4;
+  }
+}
+.col-sixth {
+  grid-column: span 2;
+  @include mScreen() {
+    grid-column: span 2;
+  }
+  @include sScreen() {
+    grid-column: span 2;
   }
 }
