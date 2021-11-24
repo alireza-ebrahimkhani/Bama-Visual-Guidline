@@ -138,7 +138,7 @@ h6,
   @extend %enType;
 }
 .subtitle1 {
-  @include type(400, 2rem, 0.15, auto, capitalize);
+  @include type(500, 2rem, 0.15, auto, capitalize);
   @extend %enType;
 }
 .subtitle2 {
@@ -183,6 +183,12 @@ a {
     display: block;
   }
 }
+.faContent .fa{
+  display: block;
+}
 .body1.fa{
   font-size: 1.9rem;
+}
+.center{
+  text-align: center;
 }

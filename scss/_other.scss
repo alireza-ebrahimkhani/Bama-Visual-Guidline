@@ -60,6 +60,7 @@ h2{
         display: none;
     }
 }
+
 .colorBox{
     width: 100%;
     padding-top: 100%;
@@ -102,6 +103,14 @@ h2{
             border-radius: 50%;
             transition: $mediumMotion;
         }
+    }
+}
+.colorBox-thin{
+    & .colorBox{
+        height: 10rem;
+        padding-top: unset;
+        border-radius: unset;
+        position: relative;
     }
 }
 .colorProportion{
@@ -209,4 +218,55 @@ ul{
         margin-right: 2rem;
         margin-bottom: 1rem;
     }
+}
+.audience{
+    background-color: white;
+    &_wrapper{
+        padding: 2rem;
+    }
+    &_accordion{
+        position: relative;
+        z-index: 1;
+    }
+    &_img img{
+        z-index: 1 !important;
+    }
+    & .accordion_icon{
+        float: unset;
+        position: absolute;
+        top: 2rem;
+    }
+    & .accordion_item{
+    }
+    & .accordion_header{
+        position: relative;
+        & h6{
+            font-weight: 500;
+        }
+    }
+    &_title{
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        @include sScreen() {
+            display: unset;
+          }
+    }
+    &_summery{
+        position: relative;
+        & ul{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 0 !important;
+            @include sScreen() {
+                position: unset;
+                margin-top: 2rem;
+              }
+        }
+        @include sScreen() {
+            margin-top: 2rem;
+          }
+    }
+
+
 }

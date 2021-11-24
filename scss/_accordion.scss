@@ -1,13 +1,17 @@
 .accordion{
+    & .h6{
+
+        font-weight: 300 !important;
+    }
     &_list{
         list-style: none;
         width: 100%;
     }
-    &_header{
+    &_header , &_statucHeader{
         cursor: pointer;
         padding: 2rem 0;
     }
-    &_header h6 {
+    &_header h6 , &_header a {
         display: inline-block;
     }
     &_body{

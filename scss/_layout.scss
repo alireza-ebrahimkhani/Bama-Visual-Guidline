@@ -47,10 +47,23 @@ article {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.smallRow{
+  max-width: 600px;
+  margin: 0 auto;
+}
 .col-full {
   grid-column: span 12;
   @include mScreen() {
     grid-column: span 8;
+  }
+  @include sScreen() {
+    grid-column: span 4;
+  }
+}
+.col-twoThirds {
+  grid-column: span 8;
+  @include mScreen() {
+    grid-column: span 4;
   }
   @include sScreen() {
     grid-column: span 4;

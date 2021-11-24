@@ -95,6 +95,11 @@ article {
   }
 }
 
+.smallRow {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .col-full {
   grid-column: span 12;
 }
@@ -107,6 +112,22 @@ article {
 
 @media only screen and (max-width: 600px) {
   .col-full {
+    grid-column: span 4;
+  }
+}
+
+.col-twoThirds {
+  grid-column: span 8;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-twoThirds {
+    grid-column: span 4;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .col-twoThirds {
     grid-column: span 4;
   }
 }
@@ -314,7 +335,7 @@ h6,
 }
 
 .subtitle1 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2rem;
   letter-spacing: 0.15;
   line-height: auto;
@@ -393,8 +414,16 @@ a:hover {
   display: block;
 }
 
+.faContent .fa {
+  display: block;
+}
+
 .body1.fa {
   font-size: 1.9rem;
+}
+
+.center {
+  text-align: center;
 }
 
 .header {
@@ -880,17 +909,21 @@ a.toc-link:hover {
 }
 
 /* table of content end*/
+.accordion .h6 {
+  font-weight: 300 !important;
+}
+
 .accordion_list {
   list-style: none;
   width: 100%;
 }
 
-.accordion_header {
+.accordion_header, .accordion_statucHeader {
   cursor: pointer;
   padding: 2rem 0;
 }
 
-.accordion_header h6 {
+.accordion_header h6, .accordion_header a {
   display: inline-block;
 }
 
@@ -1145,6 +1178,13 @@ h2 {
   transition: 0.5s all ease;
 }
 
+.colorBox-thin .colorBox {
+  height: 10rem;
+  padding-top: unset;
+  border-radius: unset;
+  position: relative;
+}
+
 .colorProportion div {
   padding: 6rem 2rem;
   text-align: center;
@@ -1270,6 +1310,72 @@ ul {
 .bullet li {
   margin-right: 2rem;
   margin-bottom: 1rem;
+}
+
+.audience {
+  background-color: white;
+}
+
+.audience_wrapper {
+  padding: 2rem;
+}
+
+.audience_accordion {
+  position: relative;
+  z-index: 1;
+}
+
+.audience_img img {
+  z-index: 1 !important;
+}
+
+.audience .accordion_icon {
+  float: unset;
+  position: absolute;
+  top: 2rem;
+}
+
+.audience .accordion_header {
+  position: relative;
+}
+
+.audience .accordion_header h6 {
+  font-weight: 500;
+}
+
+.audience_title {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .audience_title {
+    display: unset;
+  }
+}
+
+.audience_summery {
+  position: relative;
+}
+
+.audience_summery ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .audience_summery ul {
+    position: unset;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .audience_summery {
+    margin-top: 2rem;
+  }
 }
 
 .toolBar {
@@ -1475,7 +1581,7 @@ ul {
   width: 1rem;
   height: 1rem;
   background-color: black;
-  margin: 0.5rem 0.5rem 0.5rem 2rem;
+  margin: 0.5rem 2rem 0.5rem 0.5rem;
   transition: 0.2s all ease;
   border-radius: 50%;
 }
@@ -1483,7 +1589,7 @@ ul {
 .toolBar_transPin--active {
   transition: 0.2s all ease;
   background-color: black;
-  margin: 0.5rem 1.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
 .toolBar_search {
