@@ -40,11 +40,11 @@ article {
 }
 
 .lSpace {
-  margin-bottom: 16rem !important;
+  margin-bottom: 20rem !important;
 }
 
 .xlSpace {
-  margin-bottom: 20rem !important;
+  margin-bottom: 24rem !important;
 }
 
 .boxed {
@@ -321,7 +321,7 @@ h5,
   font-weight: 400;
   font-size: 3rem;
   letter-spacing: 0;
-  line-height: auto;
+  line-height: 1.25;
   text-transform: capitalize;
 }
 
@@ -1376,6 +1376,10 @@ ul {
   .audience_summery {
     margin-top: 2rem;
   }
+}
+
+ul li h5 {
+  margin-bottom: 2rem;
 }
 
 .toolBar {
