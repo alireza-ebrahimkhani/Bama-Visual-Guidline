@@ -36,7 +36,7 @@ article {
 }
 
 .mSpace {
-  margin-bottom: 6rem !important;
+  margin-bottom: 12rem !important;
 }
 
 .lSpace {
@@ -1382,6 +1382,24 @@ ul li h5 {
   margin-bottom: 2rem;
 }
 
+.perfectSize {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background-color: black;
+}
+
+.perfectSize-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.perfectSize-title {
+  margin-top: 1rem;
+}
+
 .toolBar {
   width: 100%;
   max-width: 1440px;
@@ -1599,4 +1617,40 @@ ul li h5 {
 .toolBar_search {
   align-self: center;
   justify-self: right;
+}
+
+.tab {
+  width: 100%;
+}
+
+.tab__list {
+  margin-top: 3rem;
+  display: inline-block;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.tab__item {
+  display: inline-block;
+  padding: 2rem;
+  transition: unset;
+  cursor: pointer;
+}
+
+.tab__item--active {
+  border-bottom: 2px solid black;
+}
+
+.tab__contents {
+  width: 100%;
+}
+
+.tab__content {
+  display: none;
+  width: 100%;
+}
+
+.tab__content--active {
+  display: block;
 }

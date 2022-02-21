@@ -267,9 +267,22 @@ ul{
             margin-top: 2rem;
           }
     }
-
-
 }
 ul li h5{
     margin-bottom: 2rem;
+}
+.perfectSize{
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    background-color: black;
+    &-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -40%);
+    }
+    &-title{
+        margin-top: 1rem;
+    }
 }

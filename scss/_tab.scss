@@ -16,7 +16,7 @@
         transition: unset;
         cursor: pointer;
         &--active{
-            border-bottom: 2px solid $w;
+            border-bottom: 2px solid black;
         }
     }
     &__contents{
