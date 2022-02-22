@@ -1400,6 +1400,14 @@ ul li h5 {
   margin-top: 1rem;
 }
 
+.tag {
+  float: right;
+  padding: .5rem 2rem;
+  margin: .5rem 0 .5rem .5rem;
+  border: 1px solid #acacac;
+  border-radius: 3rem;
+}
+
 .toolBar {
   width: 100%;
   max-width: 1440px;
