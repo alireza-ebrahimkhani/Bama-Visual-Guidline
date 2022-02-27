@@ -1444,7 +1444,7 @@ ul li h5 {
 @media only screen and (max-width: 600px) {
   .toolBar {
     height: auto;
-    background-color: #ffffff5b;
+    background-color: #d3d3d385;
     backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
