@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: lightgray;
+  background-color: #E5E6E4;
 }
 
 img, svg {
@@ -19,7 +19,7 @@ img, svg {
 }
 
 .br {
-  border: 1px solid #F0F0F0;
+  border: 1px solid #C9CAC8;
 }
 
 main {
@@ -1444,7 +1444,7 @@ ul li h5 {
 @media only screen and (max-width: 600px) {
   .toolBar {
     height: auto;
-    background-color: #d3d3d385;
+    background-color: #e5e6e4be;
     backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1580,7 +1580,7 @@ ul li h5 {
 }
 
 .toolBar_transSwitch {
-  background-color: #F0F0F0;
+  background-color: #C9CAC8;
   width: 3.5rem;
   height: 2rem;
   display: inline-block;
